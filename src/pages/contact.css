@@ -1,0 +1,531 @@
+/* =====================================
+   CONTACT SECTION
+===================================== */
+
+.contact-section {
+  padding: 130px 5% 80px;
+  background: #ffffff;
+}
+
+
+
+/* =====================================
+   CONTACT HEADING
+===================================== */
+
+.contact-heading {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+  padding: 40px 20px;
+  /* overflow: hidden; */
+}
+
+/* =====================================
+   HEADING ANIMATION
+===================================== */
+
+.contact-heading h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #111827;
+  animation: headingReveal 1s ease forwards;
+}
+
+@keyframes headingReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================
+   PARAGRAPH ANIMATION
+===================================== */
+
+.contact-heading p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.2rem;
+  color: #64748b;
+  line-height: 1.8;
+
+  animation: paragraphReveal 1.5s ease forwards;
+
+  opacity: 0;
+
+  animation-delay: 0.4s;
+}
+
+@keyframes paragraphReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================
+   ORANGE WORD GLOW
+===================================== */
+
+.orange-text {
+  color: #FF6B00;
+
+  position: relative;
+
+  animation: glowText 3s ease-in-out infinite;
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 0 rgba(255,107,0,0);
+  }
+
+  50% {
+    text-shadow: 0 0 20px rgba(164, 76, 12, 0.25);
+  }
+
+  100% {
+    text-shadow: 0 0 0 rgba(255,107,0,0);
+  }
+}
+
+/* =====================================
+   DIVIDER ANIMATION
+===================================== */
+
+.contact-divider {
+  width: 0;
+  height: 2px;
+
+  background: rgba(255,107,0,.30);
+
+  margin: 30px auto 0;
+
+  border-radius: 50px;
+
+  animation: dividerGrow 1s ease forwards;
+
+  animation-delay: 0.8s;
+}
+
+@keyframes dividerGrow {
+  to {
+    width: 120px;
+  }
+}
+/* =====================================
+   ORANGE GLOW ANIMATION
+===================================== */
+
+.contact-bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 1;
+}
+
+.shape1 {
+  width: 220px;
+  height: 220px;
+  background: rgba(255,107,0,0.12);
+
+  top: -40px;
+  left: 15%;
+
+  animation: floatGlow1 8s ease-in-out infinite;
+}
+
+.shape2 {
+  width: 180px;
+  height: 180px;
+  background: rgba(255,107,0,0.08);
+
+  bottom: -30px;
+  right: 15%;
+
+  animation: floatGlow2 10s ease-in-out infinite;
+}
+
+@keyframes floatGlow1 {
+  0% {
+    transform: translate(0,0);
+  }
+  50% {
+    transform: translate(20px,-15px);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+@keyframes floatGlow2 {
+  0% {
+    transform: translate(0,0);
+  }
+  50% {
+    transform: translate(-20px,15px);
+  }
+  100% {
+    transform: translate(0,0);
+  }
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+  .contact-heading h1 {
+    font-size: 2.6rem;
+  }
+
+  .contact-heading {
+    margin-bottom: 40px;
+    padding: 20px 10px;
+  }
+
+  .shape1 {
+    width: 140px;
+    height: 140px;
+  }
+
+  .shape2 {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading h1 {
+    font-size: 2rem;
+  }
+
+  .contact-heading p {
+    font-size: 14px;
+  }
+}
+/* =====================================
+   CONTACT GRID
+===================================== */
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+}
+
+/* =====================================
+   LEFT INFO CARDS
+===================================== */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.info-card {
+  background: #f8fafc;
+
+  padding: 28px;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5e7eb;
+
+  transition: all 0.4s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #ff6b00;
+  box-shadow: 0 15px 35px rgba(255, 107, 0, 0.12);
+}
+
+.contact-icon {
+  font-size: 34px !important;
+
+  color: #ff6b00 !important;
+
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  color: #111827;
+
+  margin-bottom: 12px;
+
+  font-size: 1.2rem;
+}
+
+.info-card p {
+  color: #64748b;
+
+  line-height: 1.8;
+
+  font-size: 16px;
+}
+
+/* =====================================
+   FORM CARD
+===================================== */
+
+.contact-form-card {
+  background: #f8fafc;
+
+  padding: 30px;
+
+  border-radius: 18px;
+
+  border: 1px solid #e5e7eb;
+
+  transition: all 0.4s ease;
+}
+
+.contact-form-card:hover {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+}
+
+.contact-form-card h2 {
+  color: #111827;
+
+  margin-bottom: 25px;
+
+  font-size: 1.8rem;
+}
+
+.contact-form-card form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 16px;
+}
+
+.contact-form-card input,
+.contact-form-card textarea {
+  width: 100%;
+
+  padding: 15px;
+
+  border: 1px solid #dbe3ea;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition: all 0.3s ease;
+}
+
+.contact-form-card input:focus,
+.contact-form-card textarea:focus {
+  border-color: #ff6b00;
+
+  box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.08);
+}
+
+.contact-form-card textarea {
+  resize: none;
+}
+
+.contact-form-card button {
+  height: 55px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #ff6b00;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.contact-form-card button:hover {
+  background: #e65f00;
+
+  transform: translateY(-4px);
+
+  box-shadow: 0 10px 25px rgba(255,107,0,0.25);
+}
+
+/* =====================================
+   SOCIAL ICONS
+===================================== */
+
+/* =====================================
+   SOCIAL ICONS
+===================================== */
+
+.social-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-top: 50px;
+}
+
+.social-section a {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f8fafc;
+  color: #FF6B00;
+
+  border-radius: 50%;
+  border: 1px solid #e5e7eb;
+
+  transition: all 0.3s ease;
+}
+
+.social-section a svg {
+  font-size: 26px;
+}
+
+/* Professional Hover */
+
+.social-section a:hover {
+  background: #FF6B00;
+  color: #ffffff;
+  border-color: #FF6B00;
+
+  box-shadow: 0 8px 20px rgba(255, 107, 0, 0.20);
+}
+
+/* Tablet */
+
+@media (max-width: 768px) {
+  .social-section {
+    gap: 14px;
+    margin-top: 40px;
+  }
+
+  .social-section a {
+    width: 50px;
+    height: 50px;
+  }
+
+  .social-section a svg {
+    font-size: 22px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .social-section a {
+    width: 45px;
+    height: 45px;
+  }
+
+  .social-section a svg {
+    font-size: 20px;
+  }
+}
+/* =====================================
+   FLOATING ANIMATION
+===================================== */
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-heading h1 {
+    font-size: 3rem;
+  }
+
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  .contact-section {
+    padding: 95px 20px 50px;
+  }
+
+  .contact-heading h1 {
+    font-size: 2.3rem;
+  }
+
+  .contact-heading p {
+    font-size: 15px;
+  }
+
+  .info-card,
+  .contact-form-card {
+    padding: 22px;
+  }
+
+  .social-section a {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+
+  .contact-heading h1 {
+    font-size: 2rem;
+  }
+
+  .contact-heading p {
+    font-size: 14px;
+  }
+
+  .social-section {
+    gap: 12px;
+  }
+}
