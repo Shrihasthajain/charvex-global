@@ -38,8 +38,7 @@ function Header () {
 
         <div
           className={`hamburger ${mobileMenu ? "active" : ""}`}
-          onClick={toggleMenu}
-        > 
+          onClick={toggleMenu}> 
           <span></span>
           <span></span>
           <span></span>

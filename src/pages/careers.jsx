@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./careers.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import GroupsIcon from "@mui/icons-material/Groups";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
@@ -40,14 +38,12 @@ function Careers() {
 
   const [openModal, setOpenModal] = useState(false);
   const [selectedRole, setSelectedRole] = useState("");
-
   const [applicationType, setApplicationType] = useState("");
   const handleApply = (role, type) => {
   setSelectedRole(role);
   setApplicationType(type);
   setOpenModal(true);
 };
-
 
   const closeModal = () => {
   setOpenModal(false);
@@ -57,11 +53,8 @@ function Careers() {
     <>
       <Header />
 
-      <section className="career-section">
-
-        {/* HERO */}
-
-       <div className="career-heading">
+<section className="career-section">
+  <div className="career-heading">
 
   <div className="career-bg-shape shape1"></div>
   <div className="career-bg-shape shape2"></div>
@@ -74,18 +67,12 @@ function Careers() {
     Be part of a dynamic team of innovators and
     problem-solvers shaping the future of technology.
   </p>
-
   <div className="career-divider"></div>
 
 </div>
-
-        {/* CULTURE */}
-
-        <div className="culture-section">
-
+    <div className="culture-section">
           <div className="culture-heading">
             <h2>Our Culture</h2>
-
             <p>
               We believe in creating an environment where
               talented individuals can thrive and make an impact.
@@ -134,18 +121,13 @@ function Careers() {
 
         </div>
 
-        {/* CAREERS */}
-
         <div className="openings-section">
-
           <h2>Careers at Charvex</h2>
-
           <p>
             Explore job openings and internship opportunities
           </p>
 
           <div className="tabs">
-
             <button
               className={activeTab === "jobs" ? "active-tab" : ""}
               onClick={() => setActiveTab("jobs")}
@@ -170,7 +152,6 @@ function Careers() {
           </div>
 
           <div className="jobs-grid">
-
             {activeTab === "jobs" &&
               jobs.map((item, index) => (
                 <div
@@ -179,13 +160,8 @@ function Careers() {
                   data-aos="zoom-in"
                 >
                   <h3>{item}</h3>
-
                   
-                 <button
-  onClick={() => handleApply(item, "job")}
->
-  Apply →
-</button>
+                 <button onClick={() => handleApply(item, "job")}>Apply →</button>
                 </div>
               ))}
 
@@ -198,11 +174,7 @@ function Careers() {
                 >
                   <h3>{item}</h3>
 
-                  <button
-  onClick={() => handleApply(item, "internship")}
->
-  Apply →
-</button>
+                  <button onClick={() => handleApply(item, "internship")}>Apply →</button>
                 </div>
               ))}
 
@@ -239,50 +211,16 @@ function Careers() {
         <form className="apply-form">
 
           <input type="text" placeholder="Full Name" />
-
           <input type="email" placeholder="Email" />
-
           <input type="text" placeholder="Phone Number" />
-
-          <input
-            type="text"
-            placeholder="Current Role / Status"
-          />
-
-          <input
-            type="text"
-            placeholder="Total Experience (Years)"
-          />
-
-          <input
-            type="text"
-            placeholder="Relevant Experience (Years)"
-          />
-
-          <input
-            type="text"
-            placeholder="Primary Skills"
-          />
-
-          <input
-            type="text"
-            placeholder="Tech Stack / Tools"
-          />
-
-          <input
-            type="text"
-            placeholder="LinkedIn / GitHub / Portfolio URL"
-          />
-
-          <input
-            type="text"
-            placeholder="Notice Period"
-          />
-
-          <input
-            type="text"
-            placeholder="Current Location"
-          />
+          <input type="text" placeholder="Current Role / Status"/>
+          <input type="text" placeholder="Total Experience (Years)"/>
+          <input type="text" placeholder="Relevant Experience (Years)"/>
+          <input type="text" placeholder="Primary Skills"/>
+          <input type="text" placeholder="Tech Stack / Tools"/>
+          <input type="text" placeholder="LinkedIn / GitHub / Portfolio URL" />            
+          <input type="text" placeholder="Notice Period"/>
+          <input type="text" placeholder="Current Location"/>
 
           <button
             type="submit"
@@ -290,42 +228,19 @@ function Careers() {
           >
             Submit Application
           </button>
-
         </form>
 
       ) : (
 
         <form className="apply-form">
 
-          <input
-            type="text"
-            placeholder="Full Name"
-          />
+          <input type="text" placeholder="Full Name"/>
 
-          <input
-            type="email"
-            placeholder="Email"
-          />
-
-          <input
-            type="text"
-            placeholder="College / University"
-          />
-
-          <input
-            type="text"
-            placeholder="Branch"
-          />
-
-          <input
-            type="text"
-            placeholder="Year of Study"
-          />
-
-          <input
-            type="text"
-            placeholder="Availability Duration"
-          />
+          <input type="email" placeholder="Email"/>
+          <input type="text" placeholder="College / University"/>
+          <input type="text" placeholder="Branch"/>
+          <input type="text" placeholder="Year of Study"/>
+          <input type="text" placeholder="Availability Duration"/>
 
           <button
             type="submit"
@@ -342,6 +257,23 @@ function Careers() {
 
   </div>
 )}
+
+ <section className="ccta-wrapper">
+  <div className="ccta-section">
+    <div className="ccta-content">
+      <h2>Ready to Transform Your Business?</h2>
+
+      <p>
+        Let's discuss how Charvex Global LLP can help you
+        achieve your technology goals.
+      </p>
+
+      <button className="ccta-btn">
+        Start Your Journey →
+      </button>
+    </div>
+  </div>
+</section>
 
       <Footer />
     </>

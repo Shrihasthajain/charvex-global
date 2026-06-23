@@ -2,10 +2,8 @@ import React, { useEffect } from "react";
 import "./services.css";
 import Header from "../components/header";
 import Footer from "../components/footer";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import TaskAltIcon from "@mui/icons-material/TaskAlt";
 import LanguageIcon from "@mui/icons-material/Language";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
@@ -109,11 +107,7 @@ function Services() {
       <Header />
 
       <section className="services-section">
-
-        {/* HERO SECTION */}
-
         <div className="services-heading">
-
           <div className="services-bg-shape shape1"></div>
           <div className="services-bg-shape shape2"></div>
 
@@ -140,10 +134,6 @@ function Services() {
 
         </div>
 
-        {/* SERVICES GRID */}
-
-        {/* SERVICES LIST */}
-
 <div className="services-list">
 
   {services.map((service, index) => (
@@ -153,8 +143,6 @@ function Services() {
       className={`service-row ${index % 2 !== 0 ? "reverse" : ""}`}
       data-aos="fade-up"
     >
-
-      {/* CONTENT */}
 
       <div className="service-content">
 
@@ -188,31 +176,27 @@ function Services() {
             "Streamlined development pipelines and automated workflows for faster delivery."}
         </p>
 
-       <ul className="service-points">
-  {service.points.map((point, i) => (
-   <li
-  key={i}
-  className="service-point"
-  data-aos="fade-up"
-  data-aos-delay={i * 100}
->
-  <span className="point-check">
-  <TaskAltIcon />
-</span>
-      {point}
-    </li>
-  ))}
-</ul>
+          <ul className="service-points">
+              {service.points.map((point, i) => (
+              <li
+              key={i}
+              className="service-point"
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
+            >
+              <span className="point-check">
+              <TaskAltIcon />
+            </span>
+                  {point}
+                </li>
+              ))}
+            </ul>
 
       </div>
 
-      {/* IMAGE CARD */}
-
       <div className="service-image-card">
-
         <div className="bg-shape bg1"></div>
         <div className="bg-shape bg2"></div>
-
         <div className="service-image-content">
 
           <div className="big-icon">
@@ -232,6 +216,23 @@ function Services() {
 </div>
 
       </section>
+
+  <section className="scta-wrapper">
+  <div className="scta-section">
+    <div className="scta-content">
+      <h2>Ready to Transform Your Business?</h2>
+
+      <p>
+        Let's discuss how Charvex Global LLP can help you
+        achieve your technology goals.
+      </p>
+
+      <button className="scta-btn">
+        Start Your Journey →
+      </button>
+    </div>
+  </div>
+</section>
 
       <Footer />
     </>

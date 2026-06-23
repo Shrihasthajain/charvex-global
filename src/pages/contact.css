@@ -1,17 +1,7 @@
-/* =====================================
-   CONTACT SECTION
-===================================== */
-
 .contact-section {
   padding: 130px 5% 80px;
   background: #ffffff;
 }
-
-
-
-/* =====================================
-   CONTACT HEADING
-===================================== */
 
 .contact-heading {
   position: relative;
@@ -21,10 +11,6 @@
   padding: 40px 20px;
   /* overflow: hidden; */
 }
-
-/* =====================================
-   HEADING ANIMATION
-===================================== */
 
 .contact-heading h1 {
   font-size: 4rem;
@@ -45,21 +31,14 @@
   }
 }
 
-/* =====================================
-   PARAGRAPH ANIMATION
-===================================== */
-
 .contact-heading p {
   max-width: 700px;
   margin: auto;
   font-size: 1.2rem;
   color: #64748b;
   line-height: 1.8;
-
   animation: paragraphReveal 1.5s ease forwards;
-
   opacity: 0;
-
   animation-delay: 0.4s;
 }
 
@@ -75,15 +54,9 @@
   }
 }
 
-/* =====================================
-   ORANGE WORD GLOW
-===================================== */
-
 .orange-text {
   color: #FF6B00;
-
   position: relative;
-
   animation: glowText 3s ease-in-out infinite;
 }
 
@@ -101,22 +74,13 @@
   }
 }
 
-/* =====================================
-   DIVIDER ANIMATION
-===================================== */
-
 .contact-divider {
   width: 0;
   height: 2px;
-
   background: rgba(255,107,0,.30);
-
   margin: 30px auto 0;
-
   border-radius: 50px;
-
   animation: dividerGrow 1s ease forwards;
-
   animation-delay: 0.8s;
 }
 
@@ -125,9 +89,6 @@
     width: 120px;
   }
 }
-/* =====================================
-   ORANGE GLOW ANIMATION
-===================================== */
 
 .contact-bg-shape {
   position: absolute;
@@ -140,10 +101,8 @@
   width: 220px;
   height: 220px;
   background: rgba(255,107,0,0.12);
-
   top: -40px;
   left: 15%;
-
   animation: floatGlow1 8s ease-in-out infinite;
 }
 
@@ -151,10 +110,8 @@
   width: 180px;
   height: 180px;
   background: rgba(255,107,0,0.08);
-
   bottom: -30px;
   right: 15%;
-
   animation: floatGlow2 10s ease-in-out infinite;
 }
 
@@ -181,10 +138,6 @@
     transform: translate(0,0);
   }
 }
-
-/* =====================================
-   RESPONSIVE
-===================================== */
 
 @media (max-width: 768px) {
   .contact-heading h1 {
@@ -216,84 +169,56 @@
     font-size: 14px;
   }
 }
-/* =====================================
-   CONTACT GRID
-===================================== */
 
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   gap: 30px;
 }
-
-/* =====================================
-   LEFT INFO CARDS
-===================================== */
 
 .contact-info {
   display: flex;
   flex-direction: column;
-
   gap: 20px;
 }
 
 .info-card {
   background: #f8fafc;
-
   padding: 28px;
-
   border-radius: 18px;
-
   border: 1px solid #e5e7eb;
-
   transition: all 0.4s ease;
 }
 
 .info-card:hover {
   transform: translateY(-8px);
-
   border-color: #ff6b00;
   box-shadow: 0 15px 35px rgba(255, 107, 0, 0.12);
 }
 
 .contact-icon {
   font-size: 34px !important;
-
   color: #ff6b00 !important;
-
   margin-bottom: 15px;
 }
 
 .info-card h3 {
   color: #111827;
-
   margin-bottom: 12px;
-
   font-size: 1.2rem;
 }
 
 .info-card p {
   color: #64748b;
-
   line-height: 1.8;
-
   font-size: 16px;
 }
 
-/* =====================================
-   FORM CARD
-===================================== */
-
 .contact-form-card {
   background: #f8fafc;
-
   padding: 30px;
-
   border-radius: 18px;
-
   border: 1px solid #e5e7eb;
-
   transition: all 0.4s ease;
 }
 
@@ -303,40 +228,30 @@
 
 .contact-form-card h2 {
   color: #111827;
-
   margin-bottom: 25px;
-
   font-size: 1.8rem;
 }
 
 .contact-form-card form {
   display: flex;
   flex-direction: column;
-
   gap: 16px;
 }
 
 .contact-form-card input,
 .contact-form-card textarea {
   width: 100%;
-
   padding: 15px;
-
   border: 1px solid #dbe3ea;
-
   border-radius: 12px;
-
   outline: none;
-
   font-size: 15px;
-
   transition: all 0.3s ease;
 }
 
 .contact-form-card input:focus,
 .contact-form-card textarea:focus {
   border-color: #ff6b00;
-
   box-shadow: 0 0 0 4px rgba(255, 107, 0, 0.08);
 }
 
@@ -346,38 +261,21 @@
 
 .contact-form-card button {
   height: 55px;
-
   border: none;
-
   border-radius: 12px;
-
   background: #ff6b00;
-
   color: white;
-
   font-size: 16px;
   font-weight: 600;
-
   cursor: pointer;
-
   transition: all 0.3s ease;
 }
 
 .contact-form-card button:hover {
   background: #e65f00;
-
   transform: translateY(-4px);
-
   box-shadow: 0 10px 25px rgba(255,107,0,0.25);
 }
-
-/* =====================================
-   SOCIAL ICONS
-===================================== */
-
-/* =====================================
-   SOCIAL ICONS
-===================================== */
 
 .social-section {
   display: flex;
@@ -390,17 +288,13 @@
 .social-section a {
   width: 55px;
   height: 55px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   background: #f8fafc;
   color: #FF6B00;
-
   border-radius: 50%;
   border: 1px solid #e5e7eb;
-
   transition: all 0.3s ease;
 }
 
@@ -408,17 +302,12 @@
   font-size: 26px;
 }
 
-/* Professional Hover */
-
 .social-section a:hover {
   background: #FF6B00;
   color: #ffffff;
   border-color: #FF6B00;
-
   box-shadow: 0 8px 20px rgba(255, 107, 0, 0.20);
 }
-
-/* Tablet */
 
 @media (max-width: 768px) {
   .social-section {
@@ -436,8 +325,6 @@
   }
 }
 
-/* Mobile */
-
 @media (max-width: 480px) {
   .social-section a {
     width: 45px;
@@ -448,9 +335,6 @@
     font-size: 20px;
   }
 }
-/* =====================================
-   FLOATING ANIMATION
-===================================== */
 
 @keyframes floatCard {
   0% {
@@ -466,10 +350,6 @@
   }
 }
 
-/* =====================================
-   TABLET
-===================================== */
-
 @media (max-width: 1024px) {
 
   .contact-container {
@@ -481,10 +361,6 @@
   }
 
 }
-
-/* =====================================
-   MOBILE
-===================================== */
 
 @media (max-width: 768px) {
 
@@ -510,10 +386,6 @@
     height: 50px;
   }
 }
-
-/* =====================================
-   SMALL MOBILE
-===================================== */
 
 @media (max-width: 480px) {
 

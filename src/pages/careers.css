@@ -3,12 +3,6 @@
   background:#fff;
 }
 
-/* HERO */
-
-/* =====================================
-   CAREER HEADING
-===================================== */
-
 .career-heading {
   position: relative;
   max-width: 900px;
@@ -16,10 +10,6 @@
   text-align: center;
   padding: 40px 20px;
 }
-
-/* =====================================
-   FLOATING ORANGE SHAPES
-===================================== */
 
 .career-bg-shape {
   position: absolute;
@@ -30,24 +20,18 @@
 .shape1 {
   width: 280px;
   height: 280px;
-
   background: rgba(255, 107, 0, 0.06);
-
   top: -80px;
   left: -100px;
-
   animation: floatShape1 8s ease-in-out infinite;
 }
 
 .shape2 {
   width: 220px;
   height: 220px;
-
   background: rgba(255, 107, 0, 0.08);
-
   bottom: -50px;
   right: -80px;
-
   animation: floatShape2 10s ease-in-out infinite;
 }
 
@@ -79,15 +63,10 @@
   }
 }
 
-/* =====================================
-   HEADING ANIMATION
-===================================== */
-
 .career-heading h1 {
   font-size: 4rem;
   font-weight: 700;
   color: #111827;
-
   animation: headingReveal 1s ease forwards;
 }
 
@@ -103,21 +82,13 @@
   }
 }
 
-/* =====================================
-   PARAGRAPH ANIMATION
-===================================== */
-
 .career-heading p {
   max-width: 700px;
   margin: 20px auto 0;
-
   font-size: 1.25rem;
   line-height: 1.8;
-
   color: #64748b;
-
   opacity: 0;
-
   animation: paragraphReveal 1.5s ease forwards;
   animation-delay: 0.4s;
 }
@@ -134,13 +105,8 @@
   }
 }
 
-/* =====================================
-   ORANGE TEAM GLOW
-===================================== */
-
 .orange-text {
   color: #FF6B00;
-
   animation: glowText 3s ease-in-out infinite;
 }
 
@@ -158,20 +124,12 @@
   }
 }
 
-/* =====================================
-   DIVIDER
-===================================== */
-
 .career-divider {
   width: 0;
   height: 2px;
-
   background: rgba(255,107,0,0.30);
-
   margin: 30px auto 0;
-
   border-radius: 50px;
-
   animation: dividerGrow 1s ease forwards;
   animation-delay: 0.8s;
 }
@@ -181,10 +139,6 @@
     width: 120px;
   }
 }
-
-/* =====================================
-   RESPONSIVE
-===================================== */
 
 @media (max-width: 768px) {
 
@@ -214,64 +168,41 @@
   }
 }
 
-/* CULTURE */
-/* =====================================
-   CULTURE SECTION
-===================================== */
-
 .culture-section{
   margin-top:80px;
-
   background: linear-gradient(
     135deg,
     rgba(255,107,0,0.08),
     rgba(255,107,0,0.03)
   );
-
   border:1px solid rgba(255,107,0,0.10);
-
   border-radius:30px;
-
   padding:60px 40px;
-
   position:relative;
-
   overflow:hidden;
 }
 
 .culture-section::before{
   content:"";
-
   position:absolute;
-
   width:300px;
   height:300px;
-
   border-radius:50%;
-
   background:rgba(255,107,0,0.08);
-
   top:-120px;
   left:-120px;
-
   filter:blur(40px);
 }
 
 .culture-section::after{
   content:"";
-
   position:absolute;
-
   width:250px;
   height:250px;
-
   border-radius:50%;
-
   background:rgba(255,107,0,0.06);
-
   bottom:-100px;
   right:-100px;
-
   filter:blur(40px);
 }
 
@@ -298,74 +229,47 @@
   font-size: 1.25rem;
 }
 
-/* =====================================
-   CULTURE GRID
-===================================== */
-
 .culture-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:25px;
 }
 
-/* =====================================
-   CULTURE CARD
-===================================== */
-
 .culture-card{
   background:rgba(255,255,255,0.75);
-
   backdrop-filter:blur(12px);
-
   border:1px solid rgba(255,107,0,0.12);
-
   border-radius:22px;
-
   padding:32px 25px;
-
   text-align:center;
-
   transition:all .4s ease;
 }
 
 .culture-card:hover{
   transform:translateY(-10px);
-
   background:rgba(255,255,255,0.90);
-
   border-color:#FF6B00;
-
   box-shadow:
   0 15px 35px rgba(255,107,0,.15);
 }
 
 .culture-icon{
   color:#FF6B00 !important;
-
   font-size:46px !important;
-
   margin-bottom:18px;
 }
 
 .culture-card h3{
   color:#111827;
-
   margin-bottom:12px;
-
   font-size:1.3rem;
 }
 
 .culture-card p{
   color:#64748b;
-
   line-height:1.8;
-
   font-size:16px;
 }
-
-/* =====================================
-   TABLET
-===================================== */
 
 @media(max-width:1024px){
 
@@ -377,10 +281,6 @@
     font-size:2.4rem;
   }
 }
-
-/* =====================================
-   MOBILE
-===================================== */
 
 @media(max-width:768px){
 
@@ -410,8 +310,6 @@
   }
 }
 
-/* CAREERS */
-
 .openings-section{
   margin-top:90px;
   text-align:center;
@@ -426,8 +324,6 @@
   color:#64748b;
   margin-top:10px;
 }
-
-/* TABS */
 
 .tabs{
   margin-top:35px;
@@ -452,8 +348,6 @@
   color:white;
   font-size: 16px;
 }
-
-/* JOBS */
 
 .jobs-grid{
   margin-top:40px;
@@ -502,8 +396,6 @@
   font-weight:600;
 }
 
-/* TABLET */
-
 @media(max-width:1024px){
 
   .culture-grid{
@@ -518,8 +410,6 @@
     font-size:3rem;
   }
 }
-
-/* MOBILE */
 
 @media(max-width:768px){
 
@@ -552,114 +442,77 @@
   }
 }
 
-/* =====================================
-   APPLY MODAL
-===================================== */
-
 .apply-modal-overlay {
   position: fixed;
   inset: 0;
-
   background: rgba(0,0,0,0.65);
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   z-index: 9999;
-
   padding: 20px;
-
   animation: fadeIn .3s ease;
 }
 
 .apply-modal {
   width: 100%;
   max-width: 500px;
-
   max-height: 90vh;
   overflow-y: auto;
-
   background: white;
-
   border-radius: 25px;
-
   padding: 35px;
-
   position: relative;
-
   animation: popupScale .35s ease;
 }
 
 .apply-modal h2 {
   color: #111827;
-
   margin-bottom: 25px;
-
   text-align: center;
-
   font-size: 2rem;
 }
 
 .close-modal {
   position: absolute;
-
   top: 15px;
   right: 18px;
-
   border: none;
   background: transparent;
-
   font-size: 24px;
-
   cursor: pointer;
 }
 
 .apply-form {
   display: flex;
   flex-direction: column;
-
   gap: 15px;
 }
 
 .apply-form input {
   width: 100%;
-
   padding: 15px;
-
   border-radius: 12px;
-
   border: 1px solid #e5e7eb;
-
   outline: none;
-
   font-size: 15px;
 }
 
 .apply-form input:focus {
   border-color: #FF6B00;
-
   box-shadow: 0 0 0 4px rgba(255,107,0,.08);
 }
 
 .submit-application-btn {
   margin-top: 10px;
-
   height: 55px;
-
   border: none;
-
   border-radius: 12px;
-
   background: #FF6B00;
-
   color: white;
-
   font-size: 15px;
   font-weight: 600;
-
   cursor: pointer;
-
   transition: .3s;
 }
 
@@ -689,8 +542,6 @@
   }
 }
 
-/* MOBILE */
-
 @media (max-width:768px) {
 
   .apply-modal {
@@ -703,5 +554,109 @@
 
   .apply-form input {
     padding: 13px;
+  }
+}
+
+.ccta-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  margin-top: -70px;
+}
+
+.ccta-section {
+  width: 100%;
+  max-width: 900px;
+  background: #1A2D5C;
+  border-radius: 24px;
+  padding: 70px 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.ccta-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.ccta-content h2 {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.ccta-content p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.9;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.ccta-btn {
+  background: #FF6B00;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ccta-btn:hover {
+  transform: translateY(-4px);
+  background: #e65f00;
+  box-shadow: 0 15px 30px rgba(255, 107, 0, 0.35);
+}
+
+@media (max-width: 1024px) {
+  .ccta-section {
+    padding: 60px 30px;
+  }
+
+  .ccta-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ccta-wrapper {
+    padding: 60px 15px;
+  }
+
+  .ccta-section {
+    padding: 45px 25px;
+    border-radius: 20px;
+  }
+
+  .ccta-content h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .ccta-content p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .ccta-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ccta-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .ccta-content p {
+    font-size: 14px;
+  }
+
+  .ccta-section {
+    padding: 35px 20px;
   }
 }

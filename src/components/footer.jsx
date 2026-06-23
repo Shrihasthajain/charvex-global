@@ -30,29 +30,15 @@ function Footer() {
           </p>
 
           <div className="social-icons">
-            <a href="/">
-              <LinkedInIcon />
-            </a>
-
-            <a href="/">
-              <InstagramIcon />
-            </a>
-
-            <a href="mailto:info@charvexglobal.com">
-              <EmailIcon />
-            </a>
-
-            <a href="/">
-              <WhatsAppIcon />
-            </a>
+            <a href="/"><LinkedInIcon /></a>
+            <a href="/"><InstagramIcon /></a>
+            <a href="mailto:info@charvexglobal.com"><EmailIcon /></a>
+            <a href="/"><WhatsAppIcon /></a>
           </div>
         </div>
 
-        {/* Product */}
-
         <div className="footer-column">
           <h3>Product</h3>
-
           <ul>
             <li>Services</li>
             <li>Projects</li>
@@ -62,11 +48,8 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Services */}
-
         <div className="footer-column">
           <h3>Services</h3>
-
           <ul>
             <li>Web Development</li>
             <li>ERP Systems</li>
@@ -77,11 +60,8 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Legal */}
-
         <div className="footer-column">
           <h3>Legal</h3>
-
           <ul>
             <li>Privacy Policy</li>
             <li>Terms of Service</li>
@@ -90,13 +70,9 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
-
         <div className="footer-column">
           <h3>Contact</h3>
-
           <ul className="contact-list">
-
             <li>
               <EmailIcon className="footer-icon" />
               <span>info@charvexglobal.com</span>
@@ -119,10 +95,8 @@ function Footer() {
                 Karnataka 560054
               </span>
             </li>
-
           </ul>
         </div>
-
       </div>
 
       <div className="footer-bottom">

@@ -141,29 +141,22 @@ function Home() {
   </div>
 </section>
 
-<section className="services-section">
+<section className="home-services-section">
 
   <div className="services-heading">
 
-    <span className="services-tag">
-      OUR SERVICES
-    </span>
-
-    <h2>
-      Empowering businesses through
-      <span> cutting-edge digital solutions</span>
-    </h2>
+  <span className="services-tag">
+  Our <span className="tag-orange">Services</span>
+  </span>
 
     <p>
-      From scalable web platforms to AI,
-      DevOps, and cybersecurity excellence.
+     Empowering businesses through cutting-edge digital solutions
+      — from scalable web platforms to AI, DevOps, and cybersecurity excellence.
     </p>
 
   </div>
 
   <div className="services-grid">
-
-  {/* Web Development */}
 
   <div
     className="service-card"
@@ -182,8 +175,6 @@ function Home() {
     </p>
   </div>
 
-  {/* ERP Systems */}
-
   <div
     className="service-card"
     data-aos="zoom-in-up"
@@ -200,8 +191,6 @@ function Home() {
       for streamlined operations.
     </p>
   </div>
-
-  {/* Machine Learning */}
 
   <div
     className="service-card"
@@ -220,8 +209,6 @@ function Home() {
     </p>
   </div>
 
-  {/* UI/UX Design & Branding */}
-
   <div
     className="service-card"
     data-aos="zoom-in-up"
@@ -239,8 +226,6 @@ function Home() {
     </p>
   </div>
 
-  {/* AI & Data Science */}
-
   <div
     className="service-card"
     data-aos="zoom-in-up"
@@ -257,8 +242,6 @@ function Home() {
       learning and advanced analytics.
     </p>
   </div>
-
-  {/* Automation & DevOps */}
 
   <div
     className="service-card"
@@ -284,8 +267,6 @@ function Home() {
 
 <div className="stats-testimonial-wrapper">
 
-  {/* STATS */}
-
   <section className="stats-section">
     <div className="stats-grid">
 
@@ -306,8 +287,6 @@ function Home() {
 
     </div>
   </section>
-
-  {/* TESTIMONIALS */}
 
   <section className="testimonial-section">
 
@@ -367,8 +346,6 @@ function Home() {
           <h4>— Meghana Deshpande</h4>
         </div>
 
-        {/* Duplicate first cards for smooth infinite scrolling */}
-
         <div className="testimonial-card">
           <FormatQuoteIcon className="quote-icon" />
           <p>Charvex truly exceeded expectations. Their creativity and precision stand unmatched.</p>
@@ -387,25 +364,18 @@ function Home() {
 
   </section>
 
-  {/* CTA */}
-
-  <section className="cta-section">
-
-    <div className="cta-content">
-
+  <section className="hcta-section">
+    <div className="hcta-content">
       <h2>Ready to Transform Your Business?</h2>
-
       <p>
         Let's discuss how Charvex Global LLP can help you
         achieve your technology goals.
       </p>
 
-      <button className="cta-btn">
+      <button className="hcta-btn">
         Start Your Journey →
       </button>
-
     </div>
-
   </section>
 
 </div>

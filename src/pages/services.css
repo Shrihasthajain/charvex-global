@@ -1,28 +1,16 @@
-/* =====================================
-   SERVICES PAGE
-===================================== */
 
 .services-section{
   padding:130px 5% 80px;
   background:#fff;
 }
 
-/* =====================================
-   HERO SECTION
-===================================== */
-
 .services-heading{
   position:relative;
-  max-width:1000px;
+  max-width: 1000px;
   margin:0 auto 90px;
   text-align:center;
   padding:40px 20px;
 }
-
-
-/* =====================================
-   HEADING
-===================================== */
 
 .services-heading h1{
   font-size:4rem;
@@ -33,7 +21,6 @@
 
 .orange-text{
   color:#FF6B00;
-
   animation:glowText 3s ease-in-out infinite;
 }
 
@@ -65,21 +52,13 @@
   }
 }
 
-/* =====================================
-   PARAGRAPHS
-===================================== */
-
 .services-heading p{
   max-width:850px;
   margin:20px auto 0;
-
   font-size:1.2rem;
   line-height:1.9;
-
   color:#000000;
-
   opacity:0;
-
   animation:fadePara 1.5s ease forwards;
   animation-delay:.4s;
 }
@@ -101,21 +80,12 @@
   }
 }
 
-/* =====================================
-   DIVIDER
-===================================== */
-
 .services-divider{
-
   width:0;
   height:2px;
-
   background:rgba(255,107,0,.25);
-
   margin:35px auto 0;
-
   border-radius:50px;
-
   animation:growDivider 1s ease forwards;
   animation-delay:.8s;
 }
@@ -125,10 +95,6 @@
     width:140px;
   }
 }
-
-/* =====================================
-   MOBILE
-===================================== */
 
 @media(max-width:768px){
 
@@ -167,9 +133,6 @@
     font-size:2rem;
   }
 }
-/* =====================================
-   FLOATING SHAPES
-===================================== */
 
 .services-bg-shape{
   position:absolute;
@@ -180,24 +143,18 @@
 .shape1{
   width:280px;
   height:280px;
-
   background:rgba(255,107,0,.06);
-
   top:-70px;
   left:-100px;
-
   animation:floatShape1 8s ease-in-out infinite;
 }
 
 .shape2{
   width:220px;
   height:220px;
-
   background:rgba(255,107,0,.08);
-
   right:-70px;
   bottom:-50px;
-
   animation:floatShape2 10s ease-in-out infinite;
 }
 
@@ -240,13 +197,10 @@
   display:flex;
   align-items:center;
   gap:12px;
-
   margin-bottom:16px;
-
   color:#374151;
   font-size:18px !important;
   font-weight:500;
-
   transition:.3s ease;
 }
 
@@ -262,18 +216,9 @@
   font-size:24px !important;
 }
 
-
-/* =====================================
-   SERVICES LIST
-===================================== */
-
 .services-list{
   margin-top:80px;
 }
-
-/* =====================================
-   SERVICE ROW
-===================================== */
 
 .service-row{
   display:grid;
@@ -291,10 +236,6 @@
   order:1;
 }
 
-/* =====================================
-   LEFT CONTENT
-===================================== */
-
 .service-title{
   display:flex;
   align-items:center;
@@ -305,17 +246,12 @@
 .service-icon-box{
   width:70px;
   height:70px;
-
   border-radius:22px;
-
   background:rgba(255,107,0,.10);
-
   color:#FF6B00;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   flex-shrink:0;
 }
 
@@ -361,14 +297,10 @@
   display: flex;
   align-items: center;
   gap: 12px;
-
   margin-bottom: 14px;
-
   color: #4b5563;
   font-size: 15px;
-
   opacity: 0;
-
   animation: pointReveal 0.45s ease forwards;
 }
 
@@ -384,34 +316,19 @@
   }
 }
 
-
-
-/* =====================================
-   RIGHT CARD
-===================================== */
-
 .service-image-card{
   position:relative;
-
   height:380px;
-
   border-radius:30px;
-
   overflow:hidden;
-
   background:
   linear-gradient(
     135deg,
     rgba(255,107,0,.10),
     rgba(148,163,184,.08)
   );
-
   border:1px solid rgba(255,107,0,.10);
 }
-
-/* =====================================
-   ANIMATED BG SHAPES
-===================================== */
 
 .bg-shape{
   position:absolute;
@@ -421,28 +338,20 @@
 .bg1{
   width:450px;
   height:450px;
-
   background:rgba(255,107,0,.08);
-
   transform:rotate(45deg);
-
   left:-240px;
   top:-180px;
-
   animation:floatShape1 8s ease-in-out infinite;
 }
 
 .bg2{
   width:450px;
   height:450px;
-
   background:rgba(148,163,184,.10);
-
   transform:rotate(45deg);
-
   right:-220px;
   bottom:-180px;
-
   animation:floatShape2 10s ease-in-out infinite;
 }
 
@@ -476,27 +385,19 @@
   }
 }
 
-/* =====================================
-   CARD CONTENT
-===================================== */
-
 .service-image-content{
   position:absolute;
   inset:0;
-
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
-
   z-index:2;
 }
 
 .big-icon{
   color:#f4a261;
-
   margin-bottom:20px;
-
   animation:floatIcon 4s ease-in-out infinite;
 }
 
@@ -525,15 +426,9 @@
   }
 }
 
-/* =====================================
-   HOVER EFFECT
-===================================== */
-
 .service-image-card:hover{
   transform:translateY(-8px);
-
   box-shadow:0 20px 40px rgba(255,107,0,.12);
-
   transition:.4s ease;
 }
 
@@ -545,9 +440,6 @@
   transform:translateY(-5px);
 }
 
-/* =====================================
-   TABLET
-===================================== */
 
 @media(max-width:1024px){
 
@@ -569,10 +461,6 @@
     height:320px;
   }
 }
-
-/* =====================================
-   MOBILE
-===================================== */
 
 @media(max-width:768px){
 
@@ -608,10 +496,6 @@
   }
 }
 
-/* =====================================
-   SMALL MOBILE
-===================================== */
-
 @media(max-width:480px){
 
   .service-title h2{
@@ -629,5 +513,109 @@
 
   .service-image-card{
     height:220px;
+  }
+}
+
+.scta-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 60px 20px;
+  margin-top: -100px;
+}
+
+.scta-section {
+  width: 100%;
+  max-width: 900px;
+  background: #1A2D5C;
+  border-radius: 24px;
+  padding: 70px 40px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.scta-content {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.scta-content h2 {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.scta-content p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.9;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.scta-btn {
+  background: #FF6B00;
+  color: white;
+  border: none;
+  padding: 15px 35px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.scta-btn:hover {
+  transform: translateY(-4px);
+  background: #e65f00;
+  box-shadow: 0 15px 30px rgba(255, 107, 0, 0.35);
+}
+
+@media (max-width: 1024px) {
+  .scta-section {
+    padding: 60px 30px;
+  }
+
+  .scta-content h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .scta-wrapper {
+    padding: 60px 15px;
+  }
+
+  .scta-section {
+    padding: 45px 25px;
+    border-radius: 20px;
+  }
+
+  .scta-content h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .scta-content p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .scta-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scta-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .scta-content p {
+    font-size: 14px;
+  }
+
+  .scta-section {
+    padding: 35px 20px;
   }
 }
