@@ -32,7 +32,7 @@ function Home() {
 
         <div
           className="hero-content"
-          data-aos="fade-up"
+          data-aos="flip-up"
         >
          <h1 className="hero-title">
           <span className="black-text">
