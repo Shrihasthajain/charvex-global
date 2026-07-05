@@ -1,6 +1,16 @@
 
 .services-section{
-  padding:130px 5% 80px;
+  padding:130px 5% 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 0, 0.08),
+    #fff 45%,
+    rgba(26, 45, 92, 0.08)
+  );
+}
+
+.services-sec{
+  padding: 0px 5% 80px;
   background:#fff;
 }
 
@@ -113,18 +123,6 @@
   .services-heading p{
     font-size:15px;
   }
-
-  .shape1{
-    width:180px;
-    height:180px;
-    left:-60px;
-  }
-
-  .shape2{
-    width:140px;
-    height:140px;
-    right:-40px;
-  }
 }
 
 @media(max-width:480px){
@@ -132,30 +130,6 @@
   .services-heading h1{
     font-size:2rem;
   }
-}
-
-.services-bg-shape{
-  position:absolute;
-  border-radius:50%;
-  z-index:-1;
-}
-
-.shape1{
-  width:280px;
-  height:280px;
-  background:rgba(255,107,0,.06);
-  top:-70px;
-  left:-100px;
-  animation:floatShape1 8s ease-in-out infinite;
-}
-
-.shape2{
-  width:220px;
-  height:220px;
-  background:rgba(255,107,0,.08);
-  right:-70px;
-  bottom:-50px;
-  animation:floatShape2 10s ease-in-out infinite;
 }
 
 @keyframes floatShape1{
@@ -186,6 +160,13 @@
   }
 }
 
+.services-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px; /* Elegant professional space instead of bleeding to screens edges */
+  box-sizing: border-box;
+}
 
 .service-points{
   list-style:none;
@@ -441,37 +422,75 @@
 }
 
 
-@media(max-width:1024px){
+/* ===========================
+   Large Desktop (1600px+)
+=========================== */
 
-  .service-row{
-    grid-template-columns:1fr;
-    gap:40px;
+@media (min-width:1600px){
+
+  .services-container{
+    max-width:1400px;
   }
 
-  .service-row.reverse .service-content,
-  .service-row.reverse .service-image-card{
-    order:unset;
+  .service-row{
+    gap:90px;
+    margin-bottom:120px;
   }
 
   .service-title h2{
-    font-size:2.5rem;
+    font-size:2.6rem;
+  }
+
+  .service-desc{
+    font-size:1.25rem;
   }
 
   .service-image-card{
-    height:320px;
+    height:430px;
   }
+
+  .big-icon svg{
+    font-size:110px !important;
+  }
+
+  .service-image-content h3{
+    font-size:2.2rem;
+  }
+
 }
 
-@media(max-width:768px){
 
-  .service-row{
-    gap:30px;
-    margin-bottom:70px;
+/* ===========================
+   Laptop (1200px-1399px)
+=========================== */
+
+@media (max-width:1399px){
+
+  .services-container{
+    max-width:1140px;
+    padding:0 28px;
   }
 
-  .service-title{
-    flex-direction:column;
-    text-align:center;
+  .service-row{
+    gap:60px;
+  }
+
+}
+
+
+/* ===========================
+   Small Laptop
+=========================== */
+
+@media (max-width:1199px){
+
+  .services-container{
+    padding:0 24px;
+  }
+
+  .service-row{
+    gap:45px;
+    margin-bottom:90px;
   }
 
   .service-title h2{
@@ -479,43 +498,254 @@
   }
 
   .service-desc{
-    font-size:15px;
-    text-align:center;
+    font-size:1.1rem;
   }
 
   .service-image-card{
-    height:260px;
+    height:340px;
+  }
+
+}
+
+
+/* ===========================
+   Tablet Landscape
+=========================== */
+
+@media (max-width:991px){
+
+  .service-row{
+    grid-template-columns:1fr;
+    gap:45px;
+    margin-bottom:80px;
+  }
+
+  .service-row.reverse .service-content,
+  .service-row.reverse .service-image-card{
+    order:unset;
+  }
+
+  .service-title{
+    justify-content:center;
+    text-align:center;
+  }
+
+  .service-desc{
+    text-align:center;
+  }
+
+  .service-points,
+  .service-list{
+    max-width:550px;
+    margin:auto;
+    margin-top:25px;
+  }
+
+  .service-image-card{
+    height:320px;
+  }
+
+}
+
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width:768px){
+
+  .services-container{
+    padding:0 20px;
+  }
+
+  .services-list{
+    margin-top:60px;
+  }
+
+  .service-row{
+    gap:35px;
+    margin-bottom:70px;
+  }
+
+  .service-title{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .service-title h2{
+    font-size:1.8rem;
+  }
+
+  .service-desc{
+    font-size:16px;
+    line-height:1.8;
+  }
+
+  .service-point{
+    font-size:15px;
+  }
+
+  .service-image-card{
+    height:270px;
   }
 
   .big-icon svg{
-    font-size:70px !important;
+    font-size:72px !important;
   }
 
   .service-image-content h3{
-    font-size:1.4rem;
+    font-size:1.5rem;
   }
+
 }
 
-@media(max-width:480px){
+
+/* ===========================
+   Large Mobile
+=========================== */
+
+@media (max-width:576px){
+
+  .services-container{
+    padding:0 18px;
+  }
+
+  .service-row{
+    gap:28px;
+    margin-bottom:55px;
+  }
 
   .service-title h2{
-    font-size:1.7rem;
+    font-size:1.6rem;
+  }
+
+  .service-desc{
+    font-size:15px;
   }
 
   .service-icon-box{
-    width:65px;
-    height:65px;
+    width:60px;
+    height:60px;
   }
 
   .service-icon-box svg{
     font-size:30px !important;
   }
 
-  .service-image-card{
-    height:220px;
+  .service-point{
+    gap:10px;
+    font-size:14px;
   }
+
+  .point-check svg{
+    font-size:20px !important;
+  }
+
+  .service-image-card{
+    height:230px;
+    border-radius:20px;
+  }
+
+  .big-icon svg{
+    font-size:62px !important;
+  }
+
+  .service-image-content h3{
+    font-size:1.3rem;
+  }
+
 }
 
+
+/* ===========================
+   Small Mobile
+=========================== */
+
+@media (max-width:420px){
+
+  .services-container{
+    padding:0 16px;
+  }
+
+  .service-row{
+    margin-bottom:45px;
+  }
+
+  .service-title h2{
+    font-size:1.45rem;
+  }
+
+  .service-desc{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .service-point{
+    font-size:13px;
+    gap:8px;
+    margin-bottom:12px;
+  }
+
+  .service-icon-box{
+    width:55px;
+    height:55px;
+    border-radius:18px;
+  }
+
+  .service-icon-box svg{
+    font-size:28px !important;
+  }
+
+  .service-image-card{
+    height:210px;
+  }
+
+  .big-icon svg{
+    font-size:54px !important;
+  }
+
+  .service-image-content h3{
+    font-size:1.15rem;
+  }
+
+}
+
+
+/* ===========================
+   Extra Small Mobile
+=========================== */
+
+@media (max-width:320px){
+
+  .services-container{
+    padding:0 14px;
+  }
+
+  .service-title h2{
+    font-size:1.3rem;
+  }
+
+  .service-desc{
+    font-size:13px;
+  }
+
+  .service-point{
+    font-size:12px;
+  }
+
+  .service-image-card{
+    height:180px;
+  }
+
+  .big-icon svg{
+    font-size:46px !important;
+  }
+
+  .service-image-content h3{
+    font-size:1rem;
+  }
+
+}
 .scta-wrapper {
   display: flex;
   justify-content: center;

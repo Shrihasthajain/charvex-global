@@ -1,11 +1,21 @@
 .contact-section {
-  padding: 130px 5% 80px;
+  padding: 100px 5% 0px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 0, 0.08),
+    #fff 45%,
+    rgba(26, 45, 92, 0.08)
+  );
+}
+
+.contact-sec {
+  padding: 30px 5% 80px;
   background: #ffffff;
 }
 
 .contact-heading {
   position: relative;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto 60px;
   text-align: center;
   padding: 40px 20px;
@@ -90,31 +100,6 @@
   }
 }
 
-.contact-bg-shape {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  z-index: 1;
-}
-
-.shape1 {
-  width: 220px;
-  height: 220px;
-  background: rgba(255,107,0,0.12);
-  top: -40px;
-  left: 15%;
-  animation: floatGlow1 8s ease-in-out infinite;
-}
-
-.shape2 {
-  width: 180px;
-  height: 180px;
-  background: rgba(255,107,0,0.08);
-  bottom: -30px;
-  right: 15%;
-  animation: floatGlow2 10s ease-in-out infinite;
-}
-
 @keyframes floatGlow1 {
   0% {
     transform: translate(0,0);
@@ -147,16 +132,6 @@
   .contact-heading {
     margin-bottom: 40px;
     padding: 20px 10px;
-  }
-
-  .shape1 {
-    width: 140px;
-    height: 140px;
-  }
-
-  .shape2 {
-    width: 120px;
-    height: 120px;
   }
 }
 
@@ -365,7 +340,7 @@
 @media (max-width: 768px) {
 
   .contact-section {
-    padding: 95px 20px 50px;
+    padding: 95px 20px 2px;
   }
 
   .contact-heading h1 {

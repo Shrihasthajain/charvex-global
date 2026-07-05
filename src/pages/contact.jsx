@@ -23,21 +23,20 @@ function Contact() {
   return (
     <>
       <Header />
-      <section className="contact-section">
+     <section className="contact-section">
+          <div className="contact-heading">
 
-    <div className="contact-heading">
-   <div className="contact-bg-shape shape1"></div>
-  <div className="contact-bg-shape shape2"></div>
+        <h1>Get In <span className="orange-text">Touch</span></h1>
+        <p>
+          Have a question or ready to start your digital
+          transformation? We'd love to hear from you.
+        </p>
+        <div className="contact-divider"></div>
+        
+      </div>
+      </section>
 
-  <h1>Get In <span className="orange-text">Touch</span></h1>
-  <p>
-    Have a question or ready to start your digital
-    transformation? We'd love to hear from you.
-  </p>
-
-  <div className="contact-divider"></div>
-
-</div>
+      <section className="contact-sec">
         <div className="contact-container">
           <div
             className="contact-info"
@@ -75,7 +74,7 @@ function Contact() {
 
           <div
             className="contact-form-card"
-            data-aos="fade-left">
+            data-aos="fade-right">
             <h2>Send an Enquiry</h2>
             <form>
               <input

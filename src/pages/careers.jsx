@@ -8,9 +8,11 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import GroupsIcon from "@mui/icons-material/Groups";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
+import { useNavigate } from "react-router-dom";
 
 function Careers() {
 
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("jobs");
 
   useEffect(() => {
@@ -19,6 +21,12 @@ function Careers() {
       once: true,
     });
   }, []);
+
+  useEffect(() => {
+  if (activeTab === "courses") {
+    navigate("/courses");
+  }
+}, [activeTab, navigate]);
 
   const jobs = [
     "UI/UX Designer",
@@ -56,9 +64,6 @@ function Careers() {
 <section className="career-section">
   <div className="career-heading">
 
-  <div className="career-bg-shape shape1"></div>
-  <div className="career-bg-shape shape2"></div>
-
   <h1>
     Join Our <span className="orange-text">Team</span>
   </h1>
@@ -70,6 +75,9 @@ function Careers() {
   <div className="career-divider"></div>
 
 </div>
+
+</section>
+<section className="career-sec">
     <div className="culture-section">
           <div className="culture-heading">
             <h2>Our Culture</h2>
@@ -178,12 +186,6 @@ function Careers() {
                 </div>
               ))}
 
-            {activeTab === "courses" && (
-              <div className="coming-soon">
-                Courses Coming Soon...
-              </div>
-            )}
-
           </div>
 
         </div>
@@ -268,7 +270,7 @@ function Careers() {
         achieve your technology goals.
       </p>
 
-      <button className="ccta-btn">
+      <button className="ccta-btn" onClick={() => navigate("/contact")}>
         Start Your Journey →
       </button>
     </div>

@@ -11,8 +11,11 @@ import PsychologyIcon from "@mui/icons-material/Psychology";
 import BrushIcon from "@mui/icons-material/Brush";
 import AnalyticsIcon from "@mui/icons-material/Analytics";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
+import { useNavigate } from "react-router-dom";
 
 function Services() {
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     AOS.init({
@@ -108,8 +111,6 @@ function Services() {
 
       <section className="services-section">
         <div className="services-heading">
-          <div className="services-bg-shape shape1"></div>
-          <div className="services-bg-shape shape2"></div>
 
           <h1>
             Our <span className="orange-text">Services</span>
@@ -134,9 +135,14 @@ function Services() {
 
         </div>
 
-<div className="services-list">
+        </section>
 
-  {services.map((service, index) => (
+    <section className="services-sec">
+          <div className="services-container">
+
+    <div className="services-list">
+
+         {services.map((service, index) => (
 
     <div
       key={index}
@@ -214,6 +220,7 @@ function Services() {
   ))}
 
 </div>
+</div>
 
       </section>
 
@@ -227,7 +234,7 @@ function Services() {
         achieve your technology goals.
       </p>
 
-      <button className="scta-btn">
+      <button className="scta-btn" onClick={() => navigate("/contact")}>
         Start Your Journey →
       </button>
     </div>

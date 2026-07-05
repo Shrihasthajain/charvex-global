@@ -372,7 +372,7 @@ function Home() {
         achieve your technology goals.
       </p>
 
-      <button className="hcta-btn">
+      <button className="hcta-btn" onClick={() => navigate("/contact")}>
         Start Your Journey →
       </button>
     </div>

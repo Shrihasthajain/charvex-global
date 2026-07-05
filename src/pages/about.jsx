@@ -10,10 +10,12 @@ import ThejaImg from "../assets/images/thejas.png";
 import AhazarImg from "../assets/images/ahzhar.png";
 import DeekshithImg from "../assets/images/deekshith.png";
 import JeevanImg from "../assets/images/jeevan.png";
+import { useNavigate } from "react-router-dom";
 
 /* ══════════════════════════════════════════
    REALISTIC EARTH GLOBE COMPONENT
 ══════════════════════════════════════════ */
+
 const GlobeSVG = () => (
   <div className="globe-scene">
     <div className="g-ring g-ring-1" />
@@ -145,6 +147,8 @@ const AboutSection = () => {
   },
 ];
 
+const navigate = useNavigate();
+
   return (
     <>
       <Header />
@@ -212,8 +216,9 @@ const AboutSection = () => {
 
           <div className="about-actions" data-aos="zoom-in" data-aos-delay="250">
             <div className="actions-top">
-              <button className="btn-ghost">View Company Profile</button>
-              <button className="btn-ghost">View Incorporation Certificate</button>
+              <button className="btn-ghost"  onClick={() => window.open("/assets/pdf/profile.pdf", "_blank") }>
+                View Company Profile</button>
+              <button className="btn-ghost" onClick={() => window.open("assets/pdf/charvex llpin.pdf", "_blank")}>View Incorporation Certificate</button>
             </div>
             <div className="actions-bottom">
               <button className="btn-filled">
@@ -232,7 +237,7 @@ const AboutSection = () => {
           <div className="sec-bar" />
         </div>
         <div className="vm-grid">
-          <div className="vm-card" data-aos="fade-right">
+          <div className="vm-card" data-aos="fade-up">
             <div className="vm-glow" />
             <h3 className="vm-card-title">Our Vision</h3>
             <p className="vm-card-body">
@@ -251,7 +256,7 @@ const AboutSection = () => {
               <li>Empowering the Next Generation of Technology Professionals</li>
             </ul>
           </div>
-          <div className="vm-card" data-aos="fade-left" data-aos-delay="200">
+          <div className="vm-card" data-aos="fade-up" data-aos-delay="200">
             <div className="vm-glow" />
             <h3 className="vm-card-title">Our Mission</h3>
             <p className="vm-card-body">
@@ -351,7 +356,7 @@ const AboutSection = () => {
         </div>
 
         {/* RIGHT — content */}
-        <div className="global-left" data-aos="fade-left" data-aos-delay="150">
+        <div className="global-left" data-aos="fade-up" data-aos-delay="150">
           <h2 className="title-chip">
             Global Reach
           </h2>
@@ -393,7 +398,7 @@ const AboutSection = () => {
             achieve your technology goals.
           </p>
 
-          <button className="abcta-btn">
+          <button className="abcta-btn" onClick={() => navigate("/contact")}>
             Start Your Journey →
           </button>
         </div>
