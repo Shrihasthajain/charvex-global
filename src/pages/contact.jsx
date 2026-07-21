@@ -112,10 +112,26 @@ function Contact() {
         <div
           className="social-section"
           data-aos="zoom-in">
-          <a href="/"><LinkedInIcon /></a>
-          <a href="/"><InstagramIcon /></a>
-          <a href="/"><MailIcon /></a>
-          <a href="/"><PhoneIcon /></a>
+          <a
+                        href="https://www.linkedin.com/company/charvex"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                      >
+                        <LinkedInIcon />
+                      </a>
+                      <a
+                        href="https://www.instagram.com/charvexglobal"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Instagram"
+                      >
+                        <InstagramIcon />
+                      </a>
+                      <a href="mailto:info@charvexglobal.com" aria-label="Email">
+                        <MailIcon />
+                      </a>
+          <a href="tel:+919482350233"><PhoneIcon /></a>
         </div>
       </section>
       <Footer />

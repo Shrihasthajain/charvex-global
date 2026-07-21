@@ -15,6 +15,7 @@ html {
   --border: #d7e6fb;
   --radius: 14px;
   --shadow: 0 12px 30px -14px rgba(10, 46, 92, 0.25);
+  --wa-green: #25d366;
 }
 
 .cx-app,
@@ -43,7 +44,7 @@ html {
 .cx-app p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.65;
+  line-height: 1.6;
 }
 
 .cx-app a {
@@ -56,7 +57,6 @@ html {
   padding: 0;
 }
 
-/* ---------- Scroll-reveal animation ---------- */
 .cx-reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -78,13 +78,12 @@ html {
   }
 }
 
-/* ---------- Buttons ---------- */
 .cx-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.4rem;
-  padding: 0.85rem 1.6rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 12px;
   font-weight: 600;
   font-size: 0.95rem;
@@ -165,10 +164,9 @@ html {
 
 .cx-btn-block {
   width: 100%;
-  margin-top: 1.25rem;
+  margin-top: 1rem;
 }
 
-/* ---------- Header ---------- */
 .cx-header {
   position: fixed;
   top: 0;
@@ -182,16 +180,17 @@ html {
 }
 
 .cx-header-spacer {
-  height: 76px;
+  height: 72px;
 }
 
 .cx-header-inner {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.85rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .cx-logo {
@@ -217,7 +216,7 @@ html {
 }
 
 .cx-logo-text {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 900;
   line-height: 1.2;
   white-space: nowrap;
@@ -278,6 +277,10 @@ html {
   transform: translateY(-2px);
 }
 
+.cx-mobile-nav {
+  display: none;
+}
+
 .cx-menu-btn {
   display: none;
   flex-direction: column;
@@ -322,11 +325,10 @@ html {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ---------- Hero ---------- */
 .cx-hero {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 3rem;
+  padding: 2rem 1.5rem 2rem;
   position: relative;
 }
 
@@ -345,7 +347,7 @@ html {
 .cx-hero-top {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: stretch;
 }
 
@@ -360,11 +362,11 @@ html {
   font-size: 1rem;
   font-weight: 700;
   color: #4fa3f7 !important;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.6rem;
 }
 
 .cx-hero h1 {
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-size: clamp(2.1rem, 4.2vw, 3.2rem);
   font-weight: 800;
 }
 
@@ -373,27 +375,26 @@ html {
 }
 
 .cx-hero-copy {
-  margin-top: 2rem !important;
-  font-size: 1.1rem;
+  margin-top: 1rem !important;
+  font-size: 1.05rem;
   max-width: 560px;
 }
 
 .cx-hero-actions {
-  margin-top: 2rem;
+  margin-top: 1.4rem;
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
-/* stats now sit under the hero buttons, left column only */
 .cx-journey-stats {
-  margin-top: 2.2rem;
+  margin-top: 1.5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
+  gap: 0.7rem;
   background: linear-gradient(160deg, var(--navy), var(--blue));
   border-radius: var(--radius);
-  padding: 1.5rem 1rem;
+  padding: 1.1rem 1rem;
   box-shadow: var(--shadow);
   max-width: 480px;
 }
@@ -407,23 +408,22 @@ html {
 }
 
 .cx-stat-icon {
-  font-size: 1.3rem;
-  margin-bottom: 0.35rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
 }
 
 .cx-stat-num {
   font-family: "Sora", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 800;
 }
 
 .cx-stat-label {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   opacity: 0.85;
-  margin-top: 0.25rem;
+  margin-top: 0.2rem;
 }
 
-/* image fills the same vertical space as the left column */
 .cx-hero-visual {
   display: flex;
   min-height: 100%;
@@ -432,22 +432,27 @@ html {
 .cx-hero-img {
   width: 100%;
   height: 100%;
-  min-height: 360px;
+  min-height: 320px;
   object-fit: cover;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  animation: cxFloat 5s ease-in-out infinite;
+  animation: heroZoom 4s ease-in-out infinite;
 }
 
-@keyframes cxFloat {
-  0%,
-  100% {
-    transform: translateY(0);
+@keyframes heroZoom {
+  0% {
+    transform: scale(1);
   }
+
   50% {
-    transform: translateY(-10px);
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
+
 
 @media (prefers-reduced-motion: reduce) {
   .cx-hero-img {
@@ -455,11 +460,10 @@ html {
   }
 }
 
-/* ---------- Sections ---------- */
 .cx-section {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 4.5rem 1.5rem;
+  padding: 3rem 1.5rem;
 }
 
 .cx-section-alt {
@@ -468,33 +472,38 @@ html {
 }
 
 .cx-section-alt > * {
-  max-width: 1200px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .cx-section-copy {
-    font-size: 18px;
+  font-size: 18px;
+}
+
+#programs.cx-section,
+#why-us.cx-section {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .cx-section-head {
   text-align: center;
   max-width: 640px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 2rem;
 }
 
 .cx-section-head h2 {
-  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
-  margin-bottom: 0.9rem;
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  margin-bottom: 0.7rem;
 }
 
-/* ---------- Program filter ---------- */
 .cx-filter-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.6rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.6rem;
 }
 
 .cx-filter-chip {
@@ -520,21 +529,16 @@ html {
   transform: translateY(0) scale(0.97);
 }
 
-/* ---------- Program cards ---------- */
-/* auto-fill (not auto-fit) + a fixed max card width means a single
-   filtered result keeps its normal card width instead of stretching
-   to fill the whole row */
 .cx-program-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 340px));
-  justify-content: center;
-  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
 }
 
 .cx-program-card {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 1.5rem;
   background: var(--white);
   height: 100%;
   display: flex;
@@ -549,28 +553,27 @@ html {
 }
 
 .cx-program-icon {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.9rem;
+  margin-bottom: 0.6rem;
   display: inline-block;
   transition: transform 0.3s ease;
 }
 
 .cx-program-card h3 {
   font-size: 1.1rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
-
 
 .cx-program-desc {
   font-size: 0.8rem;
-  margin-bottom: 1rem !important;
+  margin-bottom: 0.9rem !important;
 }
 
 .cx-program-meta {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 1.2rem;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
 }
 
 .cx-meta-row {
@@ -581,7 +584,7 @@ html {
   color: var(--blue);
   font-weight: 600;
   background: var(--sky-light);
-  padding: 0.45rem 0.8rem;
+  padding: 0.4rem 0.75rem;
   border-radius: 10px;
 }
 
@@ -590,7 +593,7 @@ html {
 }
 
 .cx-benefits-block {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .cx-benefits-label {
@@ -599,13 +602,13 @@ html {
   letter-spacing: 0.06em;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .cx-program-benefits li {
   font-size: 0.88rem;
   color: var(--ink);
-  padding: 0.25rem 0;
+  padding: 0.2rem 0;
   padding-left: 1.2rem;
   position: relative;
 }
@@ -619,9 +622,9 @@ html {
 }
 
 .cx-price-block {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
   border-top: 1px solid var(--border);
-  padding-top: 1rem;
+  padding-top: 0.85rem;
 }
 
 .cx-price-label {
@@ -640,7 +643,7 @@ html {
 }
 
 .cx-price-row-new {
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
 }
 
 .cx-price-old {
@@ -651,7 +654,7 @@ html {
 
 .cx-price-new {
   font-family: "Sora", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--navy);
 }
@@ -667,7 +670,7 @@ html {
 
 .cx-subtracks {
   border-top: 1px dashed var(--border);
-  padding-top: 1rem;
+  padding-top: 0.85rem;
 }
 
 .cx-subtracks-label {
@@ -676,7 +679,7 @@ html {
   letter-spacing: 0.06em;
   font-weight: 700;
   color: var(--muted);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.5rem;
 }
 
 .cx-subtrack-row {
@@ -684,7 +687,7 @@ html {
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
-  padding: 0.35rem 0;
+  padding: 0.3rem 0;
   color: var(--ink);
 }
 
@@ -697,17 +700,16 @@ html {
   border-radius: 999px;
 }
 
-/* ---------- Why us ---------- */
 .cx-why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
 }
 
 .cx-why-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 1.8rem;
+  padding: 1.4rem;
   border: 1px solid var(--border);
   height: 100%;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -720,24 +722,20 @@ html {
 }
 
 .cx-why-icon {
-  font-size: 2rem;
-  margin-bottom: 0.8rem;
+  font-size: 1.9rem;
+  margin-bottom: 0.6rem;
   display: inline-block;
   transition: transform 0.3s ease;
 }
 
-.cx-why-card:hover .cx-why-icon {
-  transform: scale(1.15) rotate(-4deg);
-}
-
 .cx-why-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.7rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.55rem;
 }
 
 .cx-why-card p {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+  font-size: 0.88rem;
+  margin-bottom: 0.85rem;
 }
 
 .cx-why-subtracks-label {
@@ -746,20 +744,19 @@ html {
   letter-spacing: 0.06em;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .cx-why-subtracks-list li {
   font-size: 0.85rem;
   color: var(--ink);
-  padding: 0.2rem 0;
+  padding: 0.15rem 0;
 }
 
-/* ---------- Steps ---------- */
 .cx-steps {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  gap: 1.2rem;
   position: relative;
 }
 
@@ -770,9 +767,9 @@ html {
 }
 
 .cx-step-num {
-  width: 52px;
-  height: 52px;
-  margin: 0 auto 1.2rem;
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--blue), var(--navy));
   color: var(--white);
@@ -781,7 +778,7 @@ html {
   justify-content: center;
   font-family: "Sora", sans-serif;
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   box-shadow: var(--shadow);
   position: relative;
   z-index: 2;
@@ -793,19 +790,19 @@ html {
 }
 
 .cx-step h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.6rem;
+  font-size: 1.02rem;
+  margin-bottom: 0.5rem;
 }
 
 .cx-step p {
-  font-size: 0.88rem;
+  font-size: 0.86rem;
 }
 
 .cx-step-connector {
   position: absolute;
-  top: 26px;
-  left: calc(50% + 26px);
-  width: calc(100% - 52px);
+  top: 24px;
+  left: calc(50% + 24px);
+  width: calc(100% - 48px);
   height: 2px;
   background: var(--border);
   z-index: 1;
@@ -813,20 +810,19 @@ html {
 
 .cx-center-cta {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
-/* ---------- Testimonials ---------- */
 .cx-testimonial-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.2rem;
 }
 
 .cx-testimonial-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 1.8rem;
+  padding: 1.4rem;
   border: 1px solid var(--border);
   margin: 0;
   height: 100%;
@@ -843,7 +839,7 @@ html {
   color: #f5a623;
   font-size: 1rem;
   letter-spacing: 2px;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.7rem;
   display: inline-block;
   transition: transform 0.25s ease;
 }
@@ -853,7 +849,7 @@ html {
 }
 
 .cx-testimonial-card blockquote {
-  margin: 0 0 1.2rem;
+  margin: 0 0 1rem;
   font-size: 0.95rem;
   color: var(--ink);
   font-style: italic;
@@ -864,9 +860,9 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.35rem;
+  gap: 0.3rem;
   border-top: 1px solid var(--border);
-  padding-top: 0.9rem;
+  padding-top: 0.8rem;
 }
 
 .cx-testi-name {
@@ -894,13 +890,12 @@ html {
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--blue);
-  margin-top: 0.3rem;
+  margin-top: 0.25rem;
 }
 
-/* ---------- Final CTA ---------- */
 .cx-cta-section {
   background: linear-gradient(160deg, var(--navy), var(--blue));
-  padding: 4.5rem 1.5rem;
+  padding: 3rem 1.5rem;
 }
 
 .cx-cta-inner {
@@ -912,13 +907,13 @@ html {
 
 .cx-cta-inner h2 {
   color: var(--white);
-  font-size: clamp(1.7rem, 3.5vw, 2.3rem);
-  margin-bottom: 1.2rem;
+  font-size: clamp(1.6rem, 3.2vw, 2.2rem);
+  margin-bottom: 1rem;
 }
 
 .cx-cta-inner p {
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .cx-cta-actions {
@@ -926,7 +921,7 @@ html {
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 1.8rem 0 1.5rem;
+  margin: 1.4rem 0 1.2rem;
 }
 
 .cx-cta-tags {
@@ -935,24 +930,23 @@ html {
 }
 
 .cx-cta-contact {
-  margin-top: 1rem;
+  margin-top: 0.85rem;
   font-weight: 600;
   color: var(--white);
 }
 
-/* ---------- Footer ---------- */
 .cx-footer {
   background: var(--navy);
   color: rgba(255, 255, 255, 0.85);
 }
 
 .cx-footer-inner {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 3.5rem 1.5rem 2rem;
+  padding: 2.5rem 1.5rem 1.5rem;
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: 2rem;
+  gap: 1.6rem;
 }
 
 .cx-footer .cx-logo-text {
@@ -960,41 +954,147 @@ html {
 }
 
 .cx-footer-brand p {
-  margin-top: 1rem;
+  margin-top: 0.85rem;
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.7);
   max-width: 320px;
+  line-height: 1.6;
 }
 
 .cx-footer-col h4 {
   color: var(--white);
   font-family: "Sora", sans-serif;
   font-size: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.cx-footer-col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .cx-footer-col ul li {
-  font-size: 0.88rem;
-  padding: 0.35rem 0;
-  color: rgba(255, 255, 255, 0.7);
-  transition: transform 0.2s ease, color 0.2s ease;
-  cursor: default;
+  padding: 0.3rem 0;
 }
 
-.cx-footer-col ul li:hover {
+.cx-footer-col ul li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cx-footer-col ul li a:hover {
   color: var(--white);
-  transform: translateX(4px);
+}
+
+.cx-footer-icon {
+  font-size: 18px !important;
+  color: rgba(255, 255, 255, 0.7);
+  flex-shrink: 0;
+}
+
+.cx-footer-col ul li a:hover .cx-footer-icon {
+  color: var(--white);
 }
 
 .cx-footer-bottom {
-  text-align: center;
-  font-size: 0.8rem;
-  padding: 1.3rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* ---------- Payment modal ---------- */
+.cx-footer-bottom p {
+  margin: 0;
+}
+
+.cx-footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.cx-social-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.cx-social-icon:hover {
+  background: var(--blue);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+
+.cx-whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--wa-green);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 26px -8px rgba(0, 0, 0, 0.45);
+  z-index: 250;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cx-whatsapp-float::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--wa-green);
+  animation: cxWaPulse 2.2s ease-out infinite;
+  z-index: -1;
+}
+
+.cx-whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 14px 32px -8px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes cxWaPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cx-whatsapp-float::before {
+    animation: none;
+    display: none;
+  }
+}
+
 @keyframes cxFadeIn {
   from {
     opacity: 0;
@@ -1035,7 +1135,7 @@ html {
   max-height: 90vh;
   overflow-y: auto;
   border-radius: 18px;
-  padding: 2.2rem;
+  padding: 2rem;
   position: relative;
   box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.45);
   animation: cxPopIn 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
@@ -1062,25 +1162,25 @@ html {
 }
 
 .cx-modal-title {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 0.5rem;
   padding-right: 2rem;
 }
 
 .cx-modal-sub {
   font-size: 0.92rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
 }
 
 .cx-modal-fee {
   background: var(--sky-light);
   border-radius: 12px;
-  padding: 1.1rem 1.3rem;
+  padding: 1rem 1.2rem;
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 0.6rem;
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .cx-modal-fee-label {
@@ -1092,7 +1192,7 @@ html {
 
 .cx-modal-fee-amount {
   font-family: "Sora", sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 800;
   color: var(--navy);
 }
@@ -1109,13 +1209,13 @@ html {
 .cx-payment-methods {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.3rem;
+  gap: 1.1rem;
 }
 
 .cx-payment-card {
   border: 1px solid var(--border);
   border-radius: 14px;
-  padding: 1.4rem;
+  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
@@ -1131,20 +1231,19 @@ html {
   font-family: "Sora", sans-serif;
   color: var(--navy);
   font-size: 1.02rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.8rem;
 }
 
-/* Two QR codes side by side, each in its own box */
 .cx-qr-row {
   display: flex;
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.8rem;
 }
 
 .cx-qr-box {
-  width: 140px;
+  width: 130px;
   aspect-ratio: 1 / 1;
   border: 1px dashed var(--border);
   border-radius: 12px;
@@ -1170,7 +1269,7 @@ html {
 .cx-payment-note {
   font-size: 0.82rem;
   text-align: center;
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.8rem;
 }
 
 .cx-payment-note a {
@@ -1178,15 +1277,14 @@ html {
   font-weight: 600;
 }
 
-/* Bank details: simple single line per item, no dividers */
 .cx-bank-details {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.8rem;
 }
 
 .cx-bank-details li {
   font-size: 0.88rem;
   color: var(--ink);
-  padding: 0.28rem 0;
+  padding: 0.22rem 0;
   line-height: 1.5;
 }
 
@@ -1209,24 +1307,76 @@ html {
 }
 
 .cx-modal-footnote {
-  margin-top: 1.6rem;
+  margin-top: 1.4rem;
   font-size: 0.8rem;
   text-align: center;
   color: var(--muted);
 }
 
-/* ---------- Responsive ---------- */
+.cx-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cx-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.cx-field-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.cx-field input,
+.cx-field select {
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--ink);
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cx-field input:focus,
+.cx-field select:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(27, 95, 217, 0.15);
+}
+
+.cx-field input[type="file"] {
+  padding: 0.5rem 0.6rem;
+  cursor: pointer;
+}
+
+.cx-form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.cx-form-actions .cx-btn {
+  flex: 1;
+}
+
 @media (max-width: 960px) {
   .cx-hero-top {
     grid-template-columns: 1fr;
   }
 
   .cx-hero-visual {
-    min-height: 260px;
+    min-height: 240px;
   }
 
   .cx-hero-img {
-    min-height: 260px;
+    min-height: 240px;
   }
 
   .cx-journey-stats {
@@ -1241,6 +1391,20 @@ html {
     display: none;
   }
 
+  .cx-why-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cx-program-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #programs.cx-section,
+  #why-us.cx-section {
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+  }
+
   .cx-footer-inner {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1248,7 +1412,7 @@ html {
 
 @media (max-width: 720px) {
   .cx-logo-text {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     max-width: 150px;
   }
 
@@ -1262,43 +1426,85 @@ html {
   }
 
   .cx-nav {
+    display: none !important;
+  }
+
+  .cx-mobile-nav {
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
     background: var(--white);
     flex-direction: column;
-    align-items: flex-start;
-    padding: 1.2rem 1.5rem;
-    gap: 1.1rem;
+    align-items: stretch;
+    padding: 1.1rem 1.5rem 1.4rem;
+    gap: 0.9rem;
     border-bottom: 1px solid var(--border);
-    display: none;
+    box-shadow: var(--shadow);
   }
 
-  .cx-nav.is-open {
+  .cx-mobile-nav.is-open {
     display: flex;
   }
 
-  .cx-nav-cta {
-    width: 100%;
-    text-align: center;
+  .cx-mobile-nav a {
+    color: var(--ink);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.4rem 0;
+  }
+
+  .cx-mobile-nav a:hover {
+    color: var(--blue);
+  }
+
+  .cx-mobile-nav-cta {
+    margin-top: 0.4rem;
+    padding: 0.7rem 1.3rem;
+    border-radius: 999px;
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+  }
+
+  .cx-mobile-nav-cta:hover {
+    transform: translateY(-2px);
   }
 
   .cx-hero {
-    padding-top: 2.5rem;
+    padding-top: 1.6rem;
   }
 
   .cx-journey-stats {
     grid-template-columns: repeat(3, 1fr);
-    padding: 1.2rem 0.7rem;
+    padding: 1rem 0.7rem;
   }
 
   .cx-stat-num {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .cx-section {
-    padding: 3rem 1.2rem;
+    padding: 2.2rem 1.2rem;
+  }
+
+  #programs.cx-section,
+  #why-us.cx-section {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .cx-why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cx-program-grid {
+    grid-template-columns: 1fr;
   }
 
   .cx-steps {
@@ -1309,12 +1515,24 @@ html {
     grid-template-columns: 1fr;
   }
 
+  .cx-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .cx-payment-methods {
     grid-template-columns: 1fr;
   }
 
   .cx-modal {
-    padding: 1.6rem;
+    padding: 1.5rem;
+  }
+
+  .cx-whatsapp-float {
+    width: 52px;
+    height: 52px;
+    bottom: 16px;
+    right: 16px;
   }
 }
 
@@ -1330,5 +1548,9 @@ html {
 
   .cx-journey-stats {
     grid-template-columns: 1fr;
+  }
+
+  .cx-form-actions {
+    flex-direction: column;
   }
 }

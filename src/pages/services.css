@@ -109,7 +109,11 @@
 @media(max-width:768px){
 
   .services-section{
-    padding:100px 20px 50px;
+    padding:100px 20px 20px;
+  }
+
+  .services-sec {
+    padding-top: 0px;
   }
 
   .services-heading{
@@ -164,7 +168,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 30px; /* Elegant professional space instead of bleeding to screens edges */
+  padding: 0 30px; 
   box-sizing: border-box;
 }
 
@@ -421,11 +425,6 @@
   transform:translateY(-5px);
 }
 
-
-/* ===========================
-   Large Desktop (1600px+)
-=========================== */
-
 @media (min-width:1600px){
 
   .services-container{
@@ -459,11 +458,6 @@
 
 }
 
-
-/* ===========================
-   Laptop (1200px-1399px)
-=========================== */
-
 @media (max-width:1399px){
 
   .services-container{
@@ -476,11 +470,6 @@
   }
 
 }
-
-
-/* ===========================
-   Small Laptop
-=========================== */
 
 @media (max-width:1199px){
 
@@ -506,11 +495,6 @@
   }
 
 }
-
-
-/* ===========================
-   Tablet Landscape
-=========================== */
 
 @media (max-width:991px){
 
@@ -547,11 +531,6 @@
 
 }
 
-
-/* ===========================
-   Tablet
-=========================== */
-
 @media (max-width:768px){
 
   .services-container{
@@ -577,12 +556,12 @@
   }
 
   .service-desc{
-    font-size:16px;
+    font-size:16px !important;
     line-height:1.8;
   }
 
   .service-point{
-    font-size:15px;
+    font-size:14px !important;
   }
 
   .service-image-card{
@@ -598,11 +577,6 @@
   }
 
 }
-
-
-/* ===========================
-   Large Mobile
-=========================== */
 
 @media (max-width:576px){
 
@@ -656,11 +630,6 @@
 
 }
 
-
-/* ===========================
-   Small Mobile
-=========================== */
-
 @media (max-width:420px){
 
   .services-container{
@@ -709,11 +678,6 @@
   }
 
 }
-
-
-/* ===========================
-   Extra Small Mobile
-=========================== */
 
 @media (max-width:320px){
 

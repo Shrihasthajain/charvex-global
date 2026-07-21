@@ -159,12 +159,12 @@ function Careers() {
 
           </div>
 
-          <div className="jobs-grid">
+          <div className="career-jobs-grid">
             {activeTab === "jobs" &&
               jobs.map((item, index) => (
                 <div
                   key={index}
-                  className="job-card"
+                  className="career-job-card"
                   data-aos="zoom-in"
                 >
                   <h3>{item}</h3>
@@ -177,7 +177,7 @@ function Careers() {
               internships.map((item, index) => (
                 <div
                   key={index}
-                  className="job-card"
+                  className="career-job-card"
                   data-aos="zoom-in"
                 >
                   <h3>{item}</h3>

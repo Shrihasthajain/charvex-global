@@ -5,7 +5,7 @@
 }
 
 .footer-container {
-  width: 92%;
+  width: 90%;
   max-width: 1500px;
   margin: auto;
   display: grid;
@@ -18,6 +18,8 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 20px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .footer-logo-img {
@@ -65,9 +67,10 @@
 }
 
 .footer-column h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .footer-column ul {
@@ -88,10 +91,25 @@
   color: #FF6B00;
 }
 
+.footer-column ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .contact-list li {
   display: flex;
   align-items: flex-start;
   gap: 10px;
+}
+
+.contact-list li a {
+  color: #bdbdbd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-list li a:hover {
+  color: #FF6B00;
 }
 
 .footer-icon {
@@ -115,6 +133,7 @@
 .footer-bottom p {
   margin: 0;
 }
+
 .char-span {
   color: #FF6B00;
   font-weight: 600;

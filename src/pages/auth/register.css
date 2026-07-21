@@ -1,0 +1,445 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --rg-primary: #1454f5;
+  --rg-primary-dark: #0f3cc9;
+  --rg-primary-light: #eff4ff;
+  --rg-dark: #0b1120;
+  --rg-white: #ffffff;
+  --rg-bg: #f4f6fb;
+  --rg-border: #e2e8f0;
+  --rg-muted: #64748b;
+  --rg-text: #1e293b;
+  --rg-danger: #ef4444;
+}
+
+.rg-page,
+.rg-page * {
+  box-sizing: border-box;
+}
+
+.rg-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+@keyframes rgSlideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rg-left {
+  width: 45%;
+  background: linear-gradient(135deg, #0b1120 0%, #1454f5 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.rg-left::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.rg-left::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.rg-left-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.rg-left-brand-mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rg-left-brand span {
+  color: var(--rg-white);
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.3px;
+}
+
+.rg-left-hero {
+  position: relative;
+  z-index: 1;
+}
+
+.rg-left-hero h1 {
+  color: var(--rg-white);
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: -0.5px;
+}
+
+.rg-left-hero p {
+  margin: 0 0 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.125rem;
+}
+
+.rg-left-hero p:last-child {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+}
+
+.rg-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.rg-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 99px;
+  padding: 8px 16px;
+  color: var(--rg-white);
+  font-size: 13px;
+  font-weight: 500;
+  width: fit-content;
+  backdrop-filter: blur(8px);
+}
+
+.rg-right {
+  flex: 1;
+  background: var(--rg-white);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+  min-width: 0;
+}
+
+.rg-card {
+  width: 100%;
+  max-width: 480px;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  animation: rgSlideIn 0.4s ease;
+}
+
+.rg-mobile-brand {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.rg-mobile-brand-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: var(--rg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.rg-mobile-brand span {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--rg-dark);
+}
+
+.rg-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--rg-dark);
+  margin: 0 0 4px;
+  letter-spacing: -0.3px;
+}
+
+.rg-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.125rem;
+  margin-bottom: 1.125rem;
+}
+
+.rg-field {
+  margin-bottom: 1.125rem;
+}
+
+.rg-field-grid {
+  margin-bottom: 0;
+}
+
+.rg-field-full {
+  grid-column: 1 / -1;
+}
+
+.rg-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--rg-text);
+  margin-bottom: 6px;
+}
+
+.rg-label-mb {
+  margin-bottom: 10px;
+}
+
+.rg-required {
+  color: var(--rg-danger);
+}
+
+.rg-input,
+.rg-select {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 1px solid var(--rg-border);
+  border-radius: 10px;
+  background: var(--rg-white);
+  color: var(--rg-text);
+  transition: border 0.2s, box-shadow 0.2s;
+  font-family: inherit;
+  outline: none;
+}
+
+.rg-input:focus,
+.rg-select:focus {
+  border-color: var(--rg-primary);
+  box-shadow: 0 0 0 3px var(--rg-primary-light);
+}
+
+.rg-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.rg-password-wrap {
+  position: relative;
+}
+
+.rg-password-wrap input::-ms-reveal,
+.rg-password-wrap input::-ms-clear {
+  display: none;
+}
+.rg-password-wrap input::-webkit-credentials-auto-fill-button,
+.rg-password-wrap input::-webkit-strong-password-auto-fill-button {
+  display: none !important;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.rg-input-pass {
+  padding-right: 44px;
+}
+
+.rg-eye-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--rg-muted);
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s;
+}
+.rg-eye-btn:hover {
+  color: var(--rg-text);
+}
+
+.rg-role-field {
+  margin-bottom: 1.5rem;
+}
+
+.rg-role-row {
+  display: flex;
+  gap: 12px;
+}
+
+.rg-role-card {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid var(--rg-border);
+  border-radius: 12px;
+  background: var(--rg-white);
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--rg-text);
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.rg-role-card.is-active {
+  border-color: var(--rg-primary);
+  background: var(--rg-primary-light);
+  color: var(--rg-primary);
+  font-weight: 600;
+}
+
+.rg-btn-primary {
+  width: 100%;
+  height: 48px;
+  background: var(--rg-primary);
+  color: var(--rg-white);
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 1.25rem;
+  transition: background 0.2s;
+  font-family: inherit;
+}
+.rg-btn-primary:hover {
+  background: var(--rg-primary-dark);
+}
+
+.rg-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+}
+.rg-divider::before,
+.rg-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rg-border);
+}
+.rg-divider span {
+  font-size: 12px;
+  color: var(--rg-muted);
+  white-space: nowrap;
+}
+
+.rg-btn-google {
+  width: 100%;
+  height: 44px;
+  background: var(--rg-white);
+  border: 1px solid var(--rg-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--rg-text);
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: background 0.2s;
+  font-family: inherit;
+}
+.rg-btn-google:hover {
+  background: var(--rg-bg);
+}
+
+.rg-switch {
+  text-align: center;
+  font-size: 13px;
+  color: var(--rg-muted);
+  margin: 0;
+}
+
+.rg-link-strong {
+  background: none;
+  border: none;
+  color: var(--rg-primary);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  padding: 0;
+}
+.rg-link-strong:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .rg-left {
+    display: none;
+  }
+  .rg-mobile-brand {
+    display: flex;
+  }
+  .rg-right {
+    padding: 1.75rem 1.25rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .rg-right {
+    padding: 1.4rem 1rem;
+  }
+  .rg-title {
+    font-size: 1.5rem;
+  }
+  .rg-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .rg-field-grid {
+    margin-bottom: 1.125rem;
+  }
+  .rg-role-row {
+    gap: 8px;
+  }
+  .rg-role-card {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rg-card {
+    animation: none;
+  }
+}

@@ -97,8 +97,6 @@
   }
 }
 
-/* ---------- Featured carousel ---------- */
-
 .project-wrapper {
   max-width: 1200px;
   margin: 0 auto 60px;
@@ -267,8 +265,6 @@
   box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
 
-/* ---------- Controls ---------- */
-
 .carousel-controls {
   display: flex;
   align-items: center;
@@ -346,8 +342,6 @@
   font-size: 16px;
   font-weight: 500;
 }
-
-/* ---------- All projects grid ---------- */
 
 .all-projects-head {
   max-width: 1200px;
@@ -462,8 +456,6 @@
   white-space: nowrap;
 }
 
-/* ---------- Responsive ---------- */
-
 @media (max-width: 1024px) {
   .projects-heading h1 {
     font-size: 46px;
@@ -483,7 +475,11 @@
 
 @media (max-width: 768px) {
   .projects-section {
-    padding: 88px 20px 2px;
+    padding: 80px 5px 0px !important;
+  }
+
+  .projects-sec {
+    padding-top: 0px !important;
   }
 
   .projects-heading h1 {

@@ -212,7 +212,7 @@
 
 @media (max-width: 768px) {
   .about-company-section {
-    padding: 60px 6% 90px;
+    padding: 0px 6% 30px;
   }
 
   .about-cards {
@@ -427,11 +427,11 @@
   padding: 60px 5%;
 }
 
-.stats-section {
+.home-stats-section {
   margin-bottom: 50px;
 }
 
-.stats-grid {
+.home-stats-grid {
   max-width: 900px;
   margin: 0 auto;
   display: grid;
@@ -439,7 +439,7 @@
   gap: 20px;
 }
 
-.stat-card {
+.home-stat-card {
   background: transparent;
   border: 1.5px solid rgba(255, 255, 255, 0.8);
   padding: 25px 20px;
@@ -448,13 +448,13 @@
   transition: all 0.4s ease;
 }
 
-.stat-card:hover {
+.home-stat-card:hover {
   transform: translateY(-8px);
   border-color: #ffffff;
   box-shadow: 0 10px 30px rgba(255,255,255,0.12);
 }
 
-.stat-card h2 {
+.home-stat-card h2 {
   color: #FF6B00;
   font-size: 2.8rem;
   font-weight: 600;
@@ -474,7 +474,7 @@
   }
 }
 
-.stat-card p {
+.home-stat-card p {
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
@@ -623,11 +623,11 @@
 
 @media (max-width: 1024px) {
 
-  .stats-grid {
+  .home-stats-grid {
     gap: 15px;
   }
 
-  .stat-card h2 {
+  .home-stat-card h2 {
     font-size: 2.2rem;
   }
 
@@ -650,7 +650,7 @@
     padding: 45px 20px;
   }
 
-  .stats-grid {
+  .home-stats-grid {
     grid-template-columns: 1fr;
   }
 
@@ -687,11 +687,11 @@
     padding: 40px 15px;
   }
 
-  .stat-card {
+  .home-stat-card {
     padding: 20px;
   }
 
-  .stat-card h2 {
+  .home-stat-card h2 {
     font-size: 2rem;
   }
 

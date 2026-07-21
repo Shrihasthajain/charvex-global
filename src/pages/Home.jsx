@@ -77,7 +77,7 @@ function Home() {
               Explore Services
             </button>
 
-            <button className="orange-btn">
+            <button className="orange-btn" onClick={() => navigate("/journey")}>
               Our Visionary Journey →
             </button>
           </div>
@@ -267,20 +267,20 @@ function Home() {
 
 <div className="stats-testimonial-wrapper">
 
-  <section className="stats-section">
-    <div className="stats-grid">
+  <section className="home-stats-section">
+    <div className="home-stats-grid">
 
-      <div className="stat-card">
+      <div className="home-stat-card">
         <h2>25+</h2>
         <p>Projects Completed</p>
       </div>
 
-      <div className="stat-card">
+      <div className="home-stat-card">
         <h2>20+</h2>
         <p>Team Members</p>
       </div>
 
-      <div className="stat-card">
+      <div className="home-stat-card">
         <h2>10+</h2>
         <p>Innovations Delivered</p>
       </div>

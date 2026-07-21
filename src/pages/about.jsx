@@ -12,9 +12,93 @@ import DeekshithImg from "../assets/images/deekshith.png";
 import JeevanImg from "../assets/images/jeevan.png";
 import { useNavigate } from "react-router-dom";
 
+
+const Icon = ({ name }) => {
+  const paths = {
+    compass: (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M14.8 9.2 13 13l-3.8 1.8L11 11z" />
+      </>
+    ),
+    shield: <path d="M12 3l7 3v6c0 4.5-3 7.7-7 9-4-1.3-7-4.5-7-9V6z" />,
+    users: (
+      <>
+        <circle cx="8.5" cy="8" r="3" />
+        <path d="M2.5 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5" />
+        <circle cx="17" cy="9" r="2.4" />
+        <path d="M15.3 14.6c2.7.2 4.7 2.2 4.7 5.4" />
+      </>
+    ),
+    spark: <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z" />,
+    trend: <path d="M3 17l6-6 4 4 8-9M15 6h6v6" />,
+    target: (
+      <>
+        <circle cx="12" cy="12" r="8.5" />
+        <circle cx="12" cy="12" r="4.5" />
+        <circle cx="12" cy="12" r="0.8" />
+      </>
+    ),
+    layers: <path d="M12 3 2 8l10 5 10-5zM2 13l10 5 10-5M2 18l10 5 10-5" />,
+    clock: (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3.5 2" />
+      </>
+    ),
+    globe: (
+      <>
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3c2.6 2.6 4 5.7 4 9s-1.4 6.4-4 9c-2.6-2.6-4-5.7-4-9s1.4-6.4 4-9z" />
+      </>
+    ),
+    doc: <path d="M6 2h9l3 3v17H6zM15 2v3h3M9 12h6M9 16h6M9 8h3" />,
+    rocket: <path d="M12 2c3 2 5 6 5 10 0 2-1 4-2 5l-1 3-2-2-2 2-1-3c-1-1-2-3-2-5 0-4 2-8 5-10zM8 15l-3 3M16 15l3 3" />,
+    pin: (
+      <>
+        <path d="M12 21s-7-6.2-7-12a7 7 0 1 1 14 0c0 5.8-7 12-7 12z" />
+        <circle cx="12" cy="9" r="2.6" />
+      </>
+    ),
+    check: <path d="M4 12.5l5 5L20 6.5" />,
+  };
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      {paths[name]}
+    </svg>
+  );
+};
+
 /* ══════════════════════════════════════════
-   REALISTIC EARTH GLOBE COMPONENT
+   HERO SIGNAL — animated origin→now spine preview
 ══════════════════════════════════════════ */
+const HeroSignal = () => (
+  <div className="hero-signal">
+    <svg viewBox="0 0 280 360" className="hs-svg" xmlns="http://www.w3.org/2000/svg">
+      <line x1="60" y1="24" x2="60" y2="336" className="hs-track" />
+      <line x1="60" y1="24" x2="60" y2="336" className="hs-progress" />
+
+      <g className="hs-node hs-node-a">
+        <circle cx="60" cy="60" r="7" />
+        <text x="86" y="56">MAY 2025</text>
+        <text x="86" y="76" className="hs-sub">Charvex founded</text>
+      </g>
+
+      <g className="hs-node hs-node-b">
+        <circle cx="60" cy="180" r="7" />
+        <text x="86" y="176">MAR 2026</text>
+        <text x="86" y="196" className="hs-sub">LLP incorporated</text>
+      </g>
+
+      <g className="hs-node hs-node-c">
+        <circle cx="60" cy="300" r="8" className="hs-now-dot" />
+        <text x="86" y="296">TODAY</text>
+        <text x="86" y="316" className="hs-sub">Building what's next</text>
+      </g>
+    </svg>
+  </div>
+);
+
 
 const GlobeSVG = () => (
   <div className="globe-scene">
@@ -36,7 +120,6 @@ const GlobeSVG = () => (
           </pattern>
         </defs>
         <rect width="560" height="280" fill="url(#grid)" />
-        {/* pass 1 */}
         <path d="M48 30 Q55 25 65 28 Q72 32 78 28 Q85 22 92 26 Q98 30 100 38 Q105 48 102 58 Q98 68 90 72 Q82 78 74 88 Q66 98 60 110 Q55 122 58 132 Q62 140 56 145 Q50 148 44 142 Q38 135 36 122 Q34 108 38 96 Q42 84 40 72 Q38 60 42 48 Z" fill="#4a9c2e"/>
         <path d="M52 88 Q60 82 68 86 Q74 92 70 100 Q64 108 56 106 Q48 102 50 94 Z" fill="#5ab03a"/>
         <path d="M32 38 Q38 32 46 36 Q50 40 48 46 Q44 50 38 48 Q32 44 32 38 Z" fill="#4a9c2e"/>
@@ -65,7 +148,6 @@ const GlobeSVG = () => (
         <path d="M292 158 Q310 150 330 154 Q346 160 350 174 Q352 190 342 200 Q328 208 310 206 Q292 200 284 186 Q278 172 292 158 Z" fill="#c87830"/>
         <path d="M356 190 Q362 184 368 190 Q370 198 364 204 Q356 204 354 196 Z" fill="#62be3a"/>
         <path d="M222 42 Q242 34 264 38 Q270 46 264 54 Q248 58 230 54 Q218 50 222 42 Z" fill="#a89040"/>
-        {/* pass 2 mirror */}
         <path d="M328 30 Q335 25 345 28 Q352 32 358 28 Q365 22 372 26 Q378 30 380 38 Q385 48 382 58 Q378 68 370 72 Q362 78 354 88 Q346 98 340 110 Q335 122 338 132 Q342 140 336 145 Q330 148 324 142 Q318 135 316 122 Q314 108 318 96 Q322 84 320 72 Q318 60 322 48 Z" fill="#4a9c2e"/>
         <path d="M332 88 Q340 82 348 86 Q354 92 350 100 Q344 108 336 106 Q328 102 330 94 Z" fill="#5ab03a"/>
         <path d="M312 38 Q318 32 326 36 Q330 40 328 46 Q324 50 318 48 Q312 44 312 38 Z" fill="#4a9c2e"/>
@@ -102,144 +184,218 @@ const GlobeSVG = () => (
   </div>
 );
 
-/* ══════════════════════════════════════════
-   MAIN COMPONENT
-══════════════════════════════════════════ */
+
 const AboutSection = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, easing: "ease-in-out", once: true, offset: 100 });
+    AOS.init({ duration: 900, easing: "ease-out-cubic", once: true, offset: 80 });
     AOS.refresh();
   }, []);
 
- const leaders = [
-  {
-    name: "Theja Suryachar P J",
-    role: "Founder & Director",
-    image: ThejaImg,
-    delay: 0,
-    color: "#ff6b00",
-    email: "theja@charvexglobal.com",
-    linkedin: "https://linkedin.com/in/theja-suryachar",
-  },
-  {
-    name: "Mohammed Ahazar",
-    role: "CEO & Director",
-    image: AhazarImg,
-    delay: 100,
-    color: "#ff6b00",
-    email: "ahazar@charvexglobal.com",
-  },
-  {
-    name: "Deekshith H R",
-    role: "CFO & Director",
-    image: DeekshithImg,
-    delay: 200,
-    color: "#ff6b00",
-    email: "deekshith@charvexglobal.com",
-  },
-  {
-    name: "Jeevan K",
-    role: "COO & Director",
-    image: JeevanImg,
-    delay: 300,
-    color: "#ff6b00",
-    email: "jeevan@charvexglobal.com",
-  },
-];
+  const navigate = useNavigate();
 
-const navigate = useNavigate();
+  const stats = [
+    { value: "2025", label: "Founded" },
+    { value: "2026", label: "LLP Incorporated" },
+    { value: "4", label: "Founding Directors" },
+    { value: "ACW-4414", label: "LLPIN, Bengaluru" },
+  ];
+
+  const values = [
+    { icon: "target", title: "Client-First Thinking", body: "Every engagement starts with your outcome, not our stack. We shape the solution around the business problem, not the other way around." },
+    { icon: "shield", title: "Integrity by Default", body: "Transparent scoping, honest timelines, and no surprises in the invoice. Trust is the actual deliverable behind every project." },
+    { icon: "spark", title: "Engineering Craft", body: "We sweat the details others skip — performance, security, and code that's still legible and maintainable two years on." },
+    { icon: "users", title: "Partnership, Not Vendorship", body: "We stay close after go-live. Long-term relationships matter more to us than one-off contracts and quick handoffs." },
+  ];
+
+  const timeline = [
+    {
+      tag: "MAY 2025",
+      title: "Foundation",
+      body: "Established on 2 May 2025, Charvex was built on a shared vision of creating impactful technology solutions and delivering long-term value to businesses. The founding team came together to drive the company's strategy, growth, and innovation from day one.",
+      status: "done",
+    },
+    {
+      tag: "MAR 2026",
+      title: "LLP Incorporation",
+      body: "Charvex Global LLP was officially incorporated on 17 March 2026 under the Ministry of Corporate Affairs, Government of India, with LLP Identification Number ACW-4414. Registered in Bengaluru, Karnataka, the company operates as a legally recognized Limited Liability Partnership.",
+      status: "done",
+    },
+    {
+      tag: "NOW",
+      title: "Growth Milestones",
+      body: "The incorporation of Charvex marked an important milestone in its journey — transforming a growing venture into a structured organization positioned for scalable growth, strategic partnerships, and lasting impact within the technology and digital services ecosystem.",
+      status: "now",
+    },
+  ];
+
+  const roadmap = [
+    { tag: "H2 2026", title: "Deepen Cloud & AI Practice", body: "Building out dedicated pods for cloud modernization and applied AI engineering." },
+    { tag: "2027", title: "Second Delivery Hub", body: "Expanding beyond Bengaluru to widen our talent base and client coverage across time zones." },
+    { tag: "2027+", title: "Charvex Labs", body: "An internal R&D track for product prototypes, open-source tooling, and early-stage partnerships." },
+  ];
+
+  const leaders = [
+    {
+      name: "Theja Suryachar P J",
+      role: "Founder & Director",
+      image: ThejaImg,
+      delay: 0,
+      email: "theja@charvexglobal.com",
+      linkedin: "https://linkedin.com/in/theja-suryachar",
+    },
+    {
+      name: "Mohammed Ahazar",
+      role: "CEO & Director",
+      image: AhazarImg,
+      delay: 90,
+      email: "ahazar@charvexglobal.com",
+    },
+    {
+      name: "Jeevan K",
+      role: "COO & Director",
+      image: JeevanImg,
+      delay: 180,
+      email: "jeevan@charvexglobal.com",
+    },
+    {
+      name: "Deekshith H R",
+      role: "CFO & Director",
+      image: DeekshithImg,
+      delay: 270,
+      email: "deekshith@charvexglobal.com",
+    },
+  ];
+
+  const whyChoose = [
+    { icon: "layers", title: "Full-Stack Capability", body: "Software, cloud, and consulting under one roof — no hand-offs between disconnected vendors." },
+    { icon: "clock", title: "Built for Speed", body: "Lean team structure means fewer approval layers and faster time from brief to build." },
+    { icon: "globe", title: "Local Roots, Global Standards", body: "Based in Bengaluru, held to the engineering bar expected by international clients." },
+    { icon: "doc", title: "Legally Structured, Fully Accountable", body: "Registered LLP with a clear governance structure — you're partnering with an entity, not a freelancer." },
+  ];
+
+  const globalFeatures = [
+    { icon: "rocket", title: "Innovation Hub", body: "Cutting-edge technology and forward-thinking solutions built for what businesses need next." },
+    { icon: "users", title: "Strategic Partnerships", body: "Collaborating with industry leaders and technology partners worldwide to widen what we can deliver." },
+    { icon: "clock", title: "24/7 Support", body: "Round-the-clock assistance across time zones, so engagements never stall on a response." },
+  ];
+
+  const visionPoints = [
+    "Trusted Partner for Digital Transformation",
+    "Innovation-Driven Product Development",
+    "Excellence in Technology and Consulting Services",
+    "Creating Sustainable Value for Businesses",
+    "Empowering the Next Generation of Technology Professionals",
+  ];
+
+  const missionPoints = [
+    "Delivering Technology That Creates Business Impact",
+    "Building Scalable and Future-Ready Digital Products",
+    "Driving Innovation Through Engineering Excellence",
+    "Creating Long-Term Value Through Trusted Partnerships",
+    "Developing Industry-Ready Technology Talent",
+  ];
 
   return (
     <>
       <Header />
 
-      {/* ── ABOUT HERO ── */}
-      <section className="about-hero">
-        <div className="blob blob-1" />
-        <div className="blob blob-2" />
-        <div className="about-hero-inner">
+      <section className="ab-hero">
+        <div className="ab-hero-grain" />
+        <div className="ab-hero-inner">
+          <div className="ab-hero-copy" data-aos="fade-up">
+            <span className="ab-eyebrow">IT Consulting · Bengaluru, India</span>
+            <h1 className="ab-hero-title">
+              We build the technology
+              <br />
+              behind other people's <span className="gradient-text">growth.</span>
+            </h1>
+            <p className="ab-hero-lead">
+              Charvex Global LLP is a forward-thinking IT consulting and technology
+              services company committed to helping businesses achieve digital
+              excellence. We specialize in delivering custom software development,
+              cloud solutions, and strategic technology consulting designed to
+              accelerate growth, enhance efficiency, and empower innovation.
+            </p>
+            <div className="ab-hero-actions">
+              <button className="btn-filled" onClick={() => navigate("/journey")}>
+                Our Journey <span className="btn-arr">→</span>
+              </button>
+              <button className="btn-ghost" onClick={() => window.open("/assets/pdf/profile.pdf", "_blank")}>
+                Company Profile
+              </button>
+              <button className="btn-ghost" onClick={() => window.open("assets/pdf/charvex llpin.pdf", "_blank")}>
+                Incorporation Certificate
+              </button>
+            </div>
+          </div>
+          <div className="ab-hero-visual" data-aos="fade-left" data-aos-delay="150">
+            <HeroSignal />
+          </div>
+        </div>
 
-          <h1 className="about-hero-title" data-aos="fade-up">
-            About <span className="gradient-text">Charvex Global LLP</span>
-          </h1>
+        <div className="about-stat-strip" data-aos="fade-up" data-aos-delay="200">
+          {stats.map((s) => (
+            <div className="about-stat-item" key={s.label}>
+              <span className="about-stat-value">{s.value}</span>
+              <span className="about-stat-label">{s.label}</span>
+            </div>
+          ))}
+        </div>
+      </section>
 
-          <p className="about-lead" data-aos="fade-up" data-aos-delay="100">
-            Charvex Global LLP is a forward-thinking IT consulting and technology
-            services company committed to helping businesses achieve digital
-            excellence. We specialize in delivering custom software development,
-            cloud solutions, and strategic technology consulting designed to
-            accelerate growth, enhance efficiency, and empower innovation.
-          </p>
-
-          <div className="about-story-card" data-aos="fade-up" data-aos-delay="150">
-            <div className="story-glow" />
-            <div className="story-mark"><span>"</span></div>
-
-            <p className="about-para">
-              Established on 2 May 2025, Charvex was built on a shared vision of
-              creating impactful technology solutions and delivering long-term value
-              to businesses. Today, the company is led by{" "}
+      <section className="story-section">
+        <div className="story-grid">
+          <div className="story-copy" data-aos="fade-up">
+            <h2 className="section-title">The Charvex journey, from first client to registered entity</h2>
+            <p className="story-p">
+              Established on <strong>2 May 2025</strong>, Charvex was built on a
+              shared vision of creating impactful technology solutions and delivering
+              long-term value to businesses. Today, the company is led by{" "}
               <strong>Theja Suryachar P J</strong> (Founder &amp; Director),{" "}
               <strong>Mohammed Ahazar</strong> (CEO &amp; Director),{" "}
-              <strong>Jeevan K</strong> (COO &amp; Director),{" "}
+              <strong>Jeevan K</strong> (COO &amp; Director), and{" "}
               <strong>Deekshith H R</strong> (CFO &amp; Director), who work together
               to drive the company's strategy, growth, and innovation.
             </p>
-
-            <p className="about-para">
+            <p className="story-p">
               Combining technical expertise, operational excellence, and business
               leadership, the founding team is dedicated to building a trusted
               technology partner that empowers organizations to embrace digital
               transformation and achieve sustainable success.
             </p>
-
-            <p className="about-para">
-              Charvex Global LLP was officially incorporated on 17 March 2026 under
-              the Ministry of Corporate Affairs, Government of India, with LLP
-              Identification Number ACW-4414. Registered in Bengaluru, Karnataka,
-              the company operates as a legally recognized Limited Liability
+            <p className="story-p">
+              Charvex Global LLP was officially incorporated on{" "}
+              <strong>17 March 2026</strong> under the Ministry of Corporate
+              Affairs, Government of India, with LLP Identification Number{" "}
+              <strong>ACW-4414</strong>. Registered in Bengaluru, Karnataka, the
+              company operates as a legally recognized Limited Liability
               Partnership.
             </p>
-
-            <p className="about-para about-para-last">
+            <p className="story-p story-p-last">
               The incorporation of Charvex marked an important milestone in its
               journey, transforming a growing venture into a structured organization
               positioned for scalable growth, strategic partnerships, and lasting
               impact within the technology and digital services ecosystem.
             </p>
           </div>
-
-          {/* orange glow divider */}
-          <div className="orange-divider" data-aos="fade-up" data-aos-delay="200">
-            <span className="orange-divider-line" />
+          <div className="story-card" data-aos="fade-up" data-aos-delay="150">
+            <span className="story-card-mark">"</span>
+            <p className="story-quote">
+              We'd rather stay small enough to know every client by name than grow
+              past the point where that's possible.
+            </p>
+            <span className="story-quote-attr">— Founding principle, Charvex Global LLP</span>
           </div>
-
-          <div className="about-actions" data-aos="zoom-in" data-aos-delay="250">
-            <div className="actions-top">
-              <button className="btn-ghost"  onClick={() => window.open("/assets/pdf/profile.pdf", "_blank") }>
-                View Company Profile</button>
-              <button className="btn-ghost" onClick={() => window.open("assets/pdf/charvex llpin.pdf", "_blank")}>View Incorporation Certificate</button>
-            </div>
-            <div className="actions-bottom">
-              <button className="btn-filled">
-                See Our Visionary Journey <span className="btn-arr">→</span>
-              </button>
-            </div>
-          </div>
-
         </div>
       </section>
 
-      {/* ── VISION & MISSION ── */}
       <section className="vm-section">
         <div className="sec-head" data-aos="fade-up">
-          <h2 className="sec-title">Our <span className="gradient-text">Vision &amp; Mission</span></h2>
-          <div className="sec-bar" />
+          <h2 className="sec-title">Vision &amp; Mission</h2>
         </div>
         <div className="vm-grid">
           <div className="vm-card" data-aos="fade-up">
-            <div className="vm-glow" />
-            <h3 className="vm-card-title">Our Vision</h3>
+            <span className="vm-tag">Vision</span>
             <p className="vm-card-body">
               To become a trusted technology partner recognized for delivering
               world-class digital solutions, building innovative products, and
@@ -249,16 +405,13 @@ const navigate = useNavigate();
               of future technology professionals.
             </p>
             <ul className="vm-list">
-              <li>Trusted Partner for Digital Transformation</li>
-              <li>Innovation-Driven Product Development</li>
-              <li>Excellence in Technology and Consulting Services</li>
-              <li>Creating Sustainable Value for Businesses</li>
-              <li>Empowering the Next Generation of Technology Professionals</li>
+              {visionPoints.map((p) => (
+                <li key={p}><Icon name="check" /><span>{p}</span></li>
+              ))}
             </ul>
           </div>
-          <div className="vm-card" data-aos="fade-up" data-aos-delay="200">
-            <div className="vm-glow" />
-            <h3 className="vm-card-title">Our Mission</h3>
+          <div className="vm-card" data-aos="fade-up" data-aos-delay="150">
+            <span className="vm-tag">Mission</span>
             <p className="vm-card-body">
               To deliver innovative technology solutions and build impactful digital
               products that help businesses achieve sustainable growth, operational
@@ -268,118 +421,98 @@ const navigate = useNavigate();
               learning and professional development.
             </p>
             <ul className="vm-list">
-              <li>Delivering Technology That Creates Business Impact</li>
-              <li>Building Scalable and Future-Ready Digital Products</li>
-              <li>Driving Innovation Through Engineering Excellence</li>
-              <li>Creating Long-Term Value Through Trusted Partnerships</li>
-              <li>Developing Industry-Ready Technology Talent</li>
+              {missionPoints.map((p) => (
+                <li key={p}><Icon name="check" /><span>{p}</span></li>
+              ))}
             </ul>
           </div>
         </div>
       </section>
 
-      {/* ── LEADERSHIP ── */}
-  <section className="leadership-section">
-  <div className="sec-head" data-aos="fade-up">
-    <h2 className="sec-title">Our Leadership Team</h2>
-    <p className="sec-sub">
-      Experienced professionals dedicated to your success
-    </p>
-  </div>
-
-  <div className="leadership-grid">
-    {leaders.map(
-      ({
-        name,
-        role,
-        image,
-        delay,
-        color,
-        email,
-        linkedin,
-      }) => (
-        <div
-          className="leader-card"
-          key={name}
-          data-aos="zoom-in-up"
-          data-aos-delay={delay}
-        >
-          <div className="leader-image">
-            <img src={image} alt={name} />
-          </div>
-
-          <h3 className="leader-name">{name}</h3>
-
-          <span
-            className="leader-role"
-            style={{ color }}
-          >
-            {role}
-          </span>
-
-          <div className="leader-contacts">
-            <a
-              href={`mailto:${email}`}
-              className="leader-icon-btn"
-              aria-label={`Email ${name}`}
-              title={email}
-            >
-              <MailIcon fontSize="small" />
-            </a>
-
-            {linkedin && (
-              <a
-                href={linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="leader-icon-btn"
-                aria-label={`${name} on LinkedIn`}
-                title="LinkedIn"
-              >
-                <LinkedInIcon fontSize="small" />
-              </a>
-            )}
-          </div>
+     
+      <section className="values-section">
+        <div className="sec-head" data-aos="fade-up">
+          <h2 className="sec-title">Core Values</h2>
         </div>
-      )
-    )}
-  </div>
-</section>
+        <div className="values-grid">
+          {values.map((v, i) => (
+            <div className="value-card" key={v.title} data-aos="fade-up" data-aos-delay={i * 90}>
+              <div className="value-icon"><Icon name={v.icon} /></div>
+              <h3 className="value-title">{v.title}</h3>
+              <p className="value-body">{v.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-      {/* ── GLOBAL REACH ── */}
+     
+      <section className="spine-section">
+        <div className="sec-head" data-aos="fade-up">
+          <h2 className="sec-title">Timeline</h2>
+          <p className="sec-sub">From first client to registered entity — the milestones that got us here.</p>
+        </div>
+        <div className="spine-track">
+          {timeline.map((t, i) => (
+            <div className={`spine-item spine-${t.status}`} key={t.title} data-aos="fade-up" data-aos-delay={i * 120}>
+              <div className="spine-node" />
+              <div className="spine-content">
+                <span className="spine-tag">{t.tag}</span>
+                <h3 className="spine-title">{t.title}</h3>
+                <p className="spine-body">{t.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      
+      <section className="leadership-section">
+        <div className="sec-head" data-aos="fade-up">
+          <h2 className="sec-title">Leadership Team</h2>
+        </div>
+        <div className="leadership-grid">
+          {leaders.map(({ name, role, image, delay, email, linkedin }) => (
+            <div className="leader-card" key={name} data-aos="fade-up" data-aos-delay={delay}>
+              <div className="leader-image">
+                <img src={image} alt={name} />
+              </div>
+              <h3 className="leader-name">{name}</h3>
+              <span className="leader-role">{role}</span>
+              <div className="leader-contacts">
+                <a href={`mailto:${email}`} className="leader-icon-btn" aria-label={`Email ${name}`} title={email}>
+                  <MailIcon fontSize="small" />
+                </a>
+                {linkedin && (
+                  <a href={linkedin} target="_blank" rel="noopener noreferrer" className="leader-icon-btn" aria-label={`${name} on LinkedIn`} title="LinkedIn">
+                    <LinkedInIcon fontSize="small" />
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      
       <section className="global-section">
-        <div className="global-blob" />
-
-        {/* LEFT — globe */}
-        <div className="global-right" data-aos="zoom-in">
+        <div className="global-visual" data-aos="zoom-in">
           <GlobeSVG />
         </div>
-
-        {/* RIGHT — content */}
-        <div className="global-left" data-aos="fade-up" data-aos-delay="150">
-          <h2 className="title-chip">
-            Global Reach
-          </h2>
-          <h3 className="global-sub">Global Presence, Local Expertise</h3>
+        <div className="global-copy" data-aos="fade-up" data-aos-delay="150">
+          <span className="section-eyebrow">Global Reach</span>
+          <h2 className="global-sub">Global Presence, Local Expertise</h2>
           <p className="global-body">
-            With a distributed team and global network of partners, we deliver
-            world-class solutions tailored to your local market needs.
+            With a distributed team and a growing network of partners, we deliver
+            world-class solutions tailored to local market needs — without losing the
+            responsiveness of a founder-led company.
           </p>
-          <div className="global-badge">
-            <span className="global-badge-dot" />
-            Bengaluru, Karnataka, India &nbsp;—&nbsp; LLP ID: ACW-4414
-          </div>
           <div className="global-features">
-            {[
-              { icon: "🚀", title: "Innovation Hub",        body: "Cutting-edge technology and forward-thinking solutions" },
-              { icon: "🤝", title: "Strategic Partnerships", body: "Collaborating with industry leaders worldwide" },
-              { icon: "⚡", title: "24/7 Support",           body: "Round-the-clock assistance across all time zones" },
-            ].map(({ icon, title, body }, i) => (
-              <div className="gf-row" key={title} data-aos="fade-up" data-aos-delay={i * 120}>
-                <div className="gf-icon">{icon}</div>
+            {globalFeatures.map((f, i) => (
+              <div className="gf-row" key={f.title} data-aos="fade-up" data-aos-delay={i * 100}>
+                <div className="gf-icon"><Icon name={f.icon} /></div>
                 <div className="gf-text">
-                  <h4 className="gf-title">{title}</h4>
-                  <p className="gf-body">{body}</p>
+                  <h4 className="gf-title">{f.title}</h4>
+                  <p className="gf-body">{f.body}</p>
                 </div>
               </div>
             ))}
@@ -387,12 +520,48 @@ const navigate = useNavigate();
         </div>
       </section>
 
+      
+      <section className="why-section">
+        <div className="sec-head" data-aos="fade-up">
+          <h2 className="sec-title">Why Choose Charvex</h2>
+        </div>
+        <div className="why-grid">
+          {whyChoose.map((w, i) => (
+            <div className="why-row" key={w.title} data-aos="fade-up" data-aos-delay={i * 100}>
+              <div className="why-icon"><Icon name={w.icon} /></div>
+              <div>
+                <h4 className="why-title">{w.title}</h4>
+                <p className="why-body">{w.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
-    <section className="abcta-wrapper">
-      <div className="abcta-section">
+     
+      <section className="spine-section roadmap-section">
+        <div className="sec-head" data-aos="fade-up">
+          <h2 className="sec-title">Future Roadmap</h2>
+          <p className="sec-sub">The timeline above doesn't stop at "now" — here's where it's headed.</p>
+        </div>
+        <div className="spine-track spine-track-future">
+          {roadmap.map((r, i) => (
+            <div className="spine-item spine-future" key={r.title} data-aos="fade-up" data-aos-delay={i * 120}>
+              <div className="spine-node" />
+              <div className="spine-content">
+                <span className="spine-tag">{r.tag}</span>
+                <h3 className="spine-title">{r.title}</h3>
+                <p className="spine-body">{r.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+     
+      <section className="abcta-section">
         <div className="abcta-content">
           <h2>Ready to Transform Your Business?</h2>
-
           <p>
             Let's discuss how Charvex Global LLP can help you
             achieve your technology goals.
@@ -402,8 +571,7 @@ const navigate = useNavigate();
             Start Your Journey →
           </button>
         </div>
-      </div>
-    </section>
+      </section>
 
       <Footer />
     </>
